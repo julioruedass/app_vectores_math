@@ -147,13 +147,12 @@ public class CambioBase extends AppCompatActivity {
             public void onClick(View view) {
                 if (f_tamaño()){
                     asignar_tamaños_vectores();
-                    if( ClaseDatosPythonJava.v_canonico == "Y"){
-                        inicio_pantalla_no_canonico();
+                    if( ClaseDatosPythonJava.v_where_base == "Canonica"){
                         asignar_tamaños_vectores();
+                        inicio_pantalla_no_canonico();
                     }else {
                         asignar_tamaños_vectores();
                         asignar_tamaños_vectores_no_canonica();
-
                     }
                     ClaseDatosPythonJava.componentes = ClaseDatosPythonJava.tamano_vector;
                 }
@@ -166,7 +165,7 @@ public class CambioBase extends AppCompatActivity {
         button_resultado2.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
-               if( ClaseDatosPythonJava.v_canonico == "Y"){
+               if( ClaseDatosPythonJava.v_where_base == "Canonica"){
                    if( get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector)){
                        PyObject pyov_validar = py.getModule("main_base_change");
                        // Llamar función Python y especificar parámetros si existen
@@ -212,7 +211,7 @@ public class CambioBase extends AppCompatActivity {
         button_procedimiento2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if( ClaseDatosPythonJava.v_canonico == "Y"){
+                if( ClaseDatosPythonJava.v_where_base == "Canonica"){
                     if( get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector)){
                         PyObject pyov_validar = py.getModule("main_base_change");
                         // Llamar función Python y especificar parámetros si existen
@@ -255,6 +254,7 @@ public class CambioBase extends AppCompatActivity {
         inicio_pantalla();
         inicio_pantalla_no_canonico();
 
+
         if (v_canonico.isChecked()){
             Toast.makeText(getApplicationContext() , "is true", Toast.LENGTH_SHORT).show();
             ClaseDatosPythonJava.v_canonico="Y";
@@ -276,35 +276,31 @@ public class CambioBase extends AppCompatActivity {
         }
 
         if (view.getId()==R.id.radbtn_b1){
-            if (rad_base1.isChecked()){
-                Toast.makeText(getApplicationContext() , "BASE 1", Toast.LENGTH_SHORT).show();
-                ClaseDatosPythonJava.v_where_base="B1";
-            }else{
                 rad_base1.setChecked(true);
-                Toast.makeText(getApplicationContext() , "BASE 1", Toast.LENGTH_SHORT).show();
-                ClaseDatosPythonJava.v_canonico="B1";
-            }
+                rad_base2.setChecked(false);
+                rad_canonica.setChecked(false);
+                ClaseDatosPythonJava.v_where_base="B1";
+            Toast.makeText(getApplicationContext() , "BASE 1", Toast.LENGTH_SHORT).show();
+            asignar_tamaños_vectores();
+            asignar_tamaños_vectores_no_canonica();
         }
         if (view.getId()==R.id.radbtn_b2){
-            if (rad_base2.isChecked()){
-                Toast.makeText(getApplicationContext() , "BASE 2", Toast.LENGTH_SHORT).show();
-                ClaseDatosPythonJava.v_where_base="B2";
-            }else{
-                rad_base2.setChecked(true);
-                Toast.makeText(getApplicationContext() , "BASE 2", Toast.LENGTH_SHORT).show();
-                ClaseDatosPythonJava.v_canonico="B2";
-            }
+            rad_base2.setChecked(true);
+            rad_base1.setChecked(false);
+            rad_canonica.setChecked(false);
+            ClaseDatosPythonJava.v_where_base="B2";
+            Toast.makeText(getApplicationContext() , "BASE 2", Toast.LENGTH_SHORT).show();
+            asignar_tamaños_vectores();
+            asignar_tamaños_vectores_no_canonica();
         }
 
         if (view.getId()==R.id.radbtn_canonica){
-            if (rad_canonica.isChecked()){
-                Toast.makeText(getApplicationContext() , "Canonica", Toast.LENGTH_SHORT).show();
-                ClaseDatosPythonJava.v_where_base="Canonica";
-            }else{
-                rad_canonica.setChecked(true);
-                Toast.makeText(getApplicationContext() , "Canonica", Toast.LENGTH_SHORT).show();
-                ClaseDatosPythonJava.v_canonico="Canonica";
-            }
+            ClaseDatosPythonJava.v_where_base="Canonica";
+            rad_base2.setChecked(false);
+            rad_base1.setChecked(false);
+            rad_canonica.setChecked(true);
+            Toast.makeText(getApplicationContext() , "Canonica", Toast.LENGTH_SHORT).show();
+            inicio_pantalla_no_canonico();
         }
 
 
@@ -721,7 +717,9 @@ public class CambioBase extends AppCompatActivity {
 
         // resultado_base.setText("");
        // textview_resultado.setText("");
-
+        rad_base2.setChecked(false);
+        rad_base1.setChecked(false);
+        rad_canonica.setChecked(true);
     }
 
 

@@ -243,18 +243,25 @@ def bases(dim, baseStr):
     flag = True
     while(flag):
         #baseStr = input("En que base esta tu vector: Canonica(C), Base1(B1) o Base2(B2)?\n")
-        if baseStr == "Y":
+        if baseStr == "Canonica":
             flag = False
             print("Favor de ingresar Base2")
-            B2 = Matrix(leerMatriz())
+            B2 = Matrix(leerMatriz()).T
             B1 = Matrix(eye(dim))
             return B1,B2
-        else:
+        elif baseStr == "B1":
             flag = False
             print("Favor de ingresar Base1")
-            B1 = leerMatriz()
+            B1 = Matrix(leerMatriz()).T
             print("Favor de ingresar Base2")
-            B2 = leerMatriz2()
+            B2 = Matrix(leerMatriz2()).T
+            return B1,B2
+        elif baseStr == "B2":
+            flag = False
+            print("Favor de ingresar Base1")
+            B1 = Matrix(leerMatriz()).T
+            print("Favor de ingresar Base2")
+            B2 = Matrix(leerMatriz2()).T
             return B2,B1
 
 def inversa(v):
@@ -325,7 +332,7 @@ def inversa(v):
 
 
 def iniciar_cambio() :
-    sn = Datos.v_canonico
+    sn = Datos.v_where_base
     v = leerVector()
     print("Vector canonico: ")
     pprint(v)
