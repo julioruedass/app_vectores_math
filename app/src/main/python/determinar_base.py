@@ -161,13 +161,13 @@ def matrix_aumentada(tipo,p_filas ,array_aumento):
 def fun_max_tam_o_vec(p_dimenciones):
     if (p_dimenciones[0] == p_dimenciones[1]):
         print(" ",p_dimenciones[0],"___________________False   true___________________________ ")
-        return p_dimenciones[0],False,True
+        return p_dimenciones[0],False,False
     elif (p_dimenciones[0] > p_dimenciones[1]):
         print(" ",p_dimenciones[1],"___________________True   False___________________________ ")
-        return p_dimenciones[1] , True,False
+        return p_dimenciones[1] ,False,True
     elif (p_dimenciones[1] > p_dimenciones[0]):
         print(" ",p_dimenciones[0],"___________________False   true___________________________ ")
-        return p_dimenciones[0], False,True
+        return p_dimenciones[0], True,False
 
 def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
     Mat_temp = Matrix(Matri)
@@ -181,7 +181,7 @@ def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
     mtx_no_cuad = limite_menor[1]
     # obtener ultmas letras dependiendo la diimension dela Matrix
     filas = Shape[0]
-    if (limite_menor[1] == True):
+    if ((limite_menor[1] == True) or(limite_menor[2] == True) ):
         filas = limite_menor[0]
     columnas = Shape[1]
     conjunto = False
@@ -351,12 +351,12 @@ def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
     pprint(Matrix( [Matrix([mtr[:filas,:filas]]) ] ))
     print("")
     # Setear Ceros filar sobrantes (vectores sobrantes)
-    if (limite_menor[1] == True):
-        for i in range(limite_menor[1]+1, Shape[0], 1):
+    if (limite_menor[2] == True):
+        for i in range(limite_menor[0], Shape[0], 1):
             mtr[i, :] = mtr[filas, :] + ( mtr[filas, :]* (-1))
     # Setear Ceros columnas sobrantes (vectores sobrantes)
-    elif (Shape[1]>Shape[0] and limite_menor[1] == False ):
-        for i in range(limite_menor[1]+2, Shape[1], 1):
+    elif ( limite_menor[1] == True ):
+        for i in range(limite_menor[0], Shape[1], 1):
             print("Secuencia de seteo de columnas: ",i)
             pprint(mtr[:, i])
             mtr[:, i] = mtr[:, filas] + ( mtr[:, filas]* (-1))
@@ -401,7 +401,7 @@ def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
             dato_1 = "Es linealmente dependiente"
             Datos.v_independiente =dato_1
             Datos.dinamicSetvalue(dato_1,"" );
-    return mtr, Res, a, conjunto, mtx_no_cuad
+    return mtr, Res, a, conjunto, limite_menor[1]
 
 def llamada_determinante(Matric):
     Mat_temp = Matrix(Matric)
@@ -443,7 +443,7 @@ def lineal_dependiente():
         matr2,tam,mat_aum = Matriz2("DETERMINANTE")
         nm =Matrix(matr2).T
         Datos.dinamicSetvalue("Matrix :",array_to_LaTeX(Matrix(mat_aum)) );
-
+        Datos.v_independiente =""
         matr3,tam2,mat_aum2 = Matriz2("GENERADOR")
         nm2 =Matrix(matr2).T
 
