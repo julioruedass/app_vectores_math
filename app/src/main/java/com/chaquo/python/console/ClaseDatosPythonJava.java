@@ -84,6 +84,8 @@ public class ClaseDatosPythonJava {
     public static String v_canonico;
     public static String v_where_base;
 
+    public static String v_independiente;
+
     public static String vector[] = new String [4];
 
     /*vector 1*/

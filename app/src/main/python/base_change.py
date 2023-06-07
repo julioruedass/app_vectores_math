@@ -230,13 +230,19 @@ def cambioDeBase(v,B1,B2):
     if v and B1 != eye(B1.shape[0]):
         print("Se multiplicó el vector por su base para hacerlo canonico")
         pprint(vp)
+        dato_1 = "Se multiplicó el vector por su base para hacerlo canonico"
+        Datos.dinamicSetvalue(dato_1, array_to_LaTeX(vp));
     inv = inversa(B2)
     if inv != None:
         vp = inv * vp
         if v:
             print("Se multiplicó el vector canonico con la matriz de transición")
+            dato_1 = "Se multiplicó el vector canonico con la matriz de transición"
+            Datos.dinamicSetvalue(dato_1,"");
         pprint(vp)
         Datos.latexMatriz =  array_to_LaTeX(vp)
+        dato_1 = "Resultado"
+        Datos.dinamicSetvalue(dato_1, array_to_LaTeX(vp));
 
 
 def bases(dim, baseStr):

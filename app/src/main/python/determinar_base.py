@@ -160,10 +160,13 @@ def matrix_aumentada(tipo,p_filas ,array_aumento):
 
 def fun_max_tam_o_vec(p_dimenciones):
     if (p_dimenciones[0] == p_dimenciones[1]):
+        print(" ",p_dimenciones[0],"___________________False   true___________________________ ")
         return p_dimenciones[0],False,True
     elif (p_dimenciones[0] > p_dimenciones[1]):
+        print(" ",p_dimenciones[1],"___________________True   False___________________________ ")
         return p_dimenciones[1] , True,False
     elif (p_dimenciones[1] > p_dimenciones[0]):
+        print(" ",p_dimenciones[0],"___________________False   true___________________________ ")
         return p_dimenciones[0], False,True
 
 def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
@@ -365,6 +368,8 @@ def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
             conjunto = False
             Datos.valida_base =0
             print("El conjunto generador NO genera base")
+            dato_1 = Datos.v_independiente
+            Datos.dinamicSetvalue(dato_1,"" );
             dato_1 = "El conjunto de vectores NO genera a R" + str( Datos.tamano_vector)
             Datos.dinamicSetvalue(dato_1,"" );
         else:
@@ -372,6 +377,8 @@ def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
                 conjunto = True
                 Datos.valida_base =1
                 print("El conjunto generador SI genera base R",filas)
+                dato_1 = Datos.v_independiente
+                Datos.dinamicSetvalue(dato_1,"" );
                 dato_1 = "El conjunto de vectores si genera a R" + str( Datos.tamano_vector)
                 Datos.dinamicSetvalue(dato_1,"" );
             else:
@@ -386,11 +393,13 @@ def func_gauss(Matri,P_aumentada,metodo,arr_ceros):
             conjunto = True
             print("Es linealmente independiente" )
             dato_1 = "Es linealmente independiente"
+            Datos.v_independiente =dato_1
             Datos.dinamicSetvalue(dato_1,"" );
         else:
             conjunto = False
             print("Es linealmente dependiente")
             dato_1 = "Es linealmente dependiente"
+            Datos.v_independiente =dato_1
             Datos.dinamicSetvalue(dato_1,"" );
     return mtr, Res, a, conjunto, mtx_no_cuad
 
@@ -427,6 +436,7 @@ def llamada_generador(Matric):
 
 
 def lineal_dependiente():
+    Datos.v_independiente=""
     try:
         Datos.itera_vector =0
         Datos.secuencia = 0
@@ -446,6 +456,7 @@ def lineal_dependiente():
         except:
             print('Ocurrio un error en función de determinante ')
             dato_1 = "Ocurrio un error en función de determinante"
+            Datos.v_independiente ="No es linealmente independiente"
             Datos.dinamicSetvalue(dato_1,"" );
             Datos.valida_base =0
         if  resultado[0] == True and resultado[1] == False :
@@ -456,6 +467,8 @@ def lineal_dependiente():
                 llamada_generador(nm2)
             except:
                 print('Ocurrio un error en función de generador ')
+                dato_1 = Datos.v_independiente
+                Datos.dinamicSetvalue(dato_1,"" );
                 dato_1 = "Ocurrio un error en función de generador"
                 Datos.dinamicSetvalue(dato_1,"" );
                 Datos.valida_base =0
@@ -467,10 +480,13 @@ def lineal_dependiente():
                 dato_1 = "La relaciòn de # Vectores y con el tamaño de vectores es invalida"
                 Datos.dinamicSetvalue(dato_1,"" );
             print("El conjunto generador NO genera base")
+            dato_1 = Datos.v_independiente
+            Datos.dinamicSetvalue(dato_1,"" );
             dato_1 = "El conjunto generador NO genera base"
             Datos.dinamicSetvalue(dato_1,"" );
             Datos.valida_base =0
     except:
+        Datos.v_independiente ="No es linealmente independiente"
         print('Ocurrio un evento con el manejo de vectores ')
         dato_1 = "Ocurrio un evento con el manejo de vectores "
         Datos.dinamicSetvalue(dato_1,"" );

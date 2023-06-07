@@ -148,37 +148,29 @@ public class CambioBase extends AppCompatActivity {
                 if (f_tamaño()){
                     asignar_tamaños_vectores();
                     if( ClaseDatosPythonJava.v_where_base == "Canonica"){
-                        asignar_tamaños_vectores();
+                        //asignar_tamaños_vectores_no_canonica();
                         inicio_pantalla_no_canonico();
                     }else {
-                        asignar_tamaños_vectores();
                         asignar_tamaños_vectores_no_canonica();
                     }
                     ClaseDatosPythonJava.componentes = ClaseDatosPythonJava.tamano_vector;
                 }
-
             }
         });
-
-
 
         button_resultado2.setOnClickListener(new View.OnClickListener() {
            @Override
            public void onClick(View view) {
+               ClaseDatosPythonJava.vaciar_etiquetas();
                if( ClaseDatosPythonJava.v_where_base == "Canonica"){
                    if( get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector)){
                        PyObject pyov_validar = py.getModule("main_base_change");
                        // Llamar función Python y especificar parámetros si existen
                        Object respuesta = pyov_validar.callAttr("main");
-
-                       // Intent ortonormal_procedimiento = new Intent(getApplicationContext(), ActivityDeterminarBaseProced.class);
-                       // startActivity(ortonormal_procedimiento);
                        mathView_formula1.setLatex(ClaseDatosPythonJava.latexMatriz);
-
                    }else{
                        Toast.makeText(getApplicationContext() , "Valores en conjunto de vectores 1 invalidos", Toast.LENGTH_SHORT).show();
                    }
-
                }else{
                   Boolean  matrix1, matrix2;
                   matrix1=get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector);
@@ -198,19 +190,15 @@ public class CambioBase extends AppCompatActivity {
                       // Intent ortonormal_procedimiento = new Intent(getApplicationContext(), ActivityDeterminarBaseProced.class);
                       // startActivity(ortonormal_procedimiento);
                        mathView_formula1.setLatex(ClaseDatosPythonJava.latexMatriz);
-
                    }
                }
-
-
-
-
             }
         });
 
         button_procedimiento2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ClaseDatosPythonJava.vaciar_etiquetas();
                 if( ClaseDatosPythonJava.v_where_base == "Canonica"){
                     if( get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector)){
                         PyObject pyov_validar = py.getModule("main_base_change");
@@ -229,7 +217,6 @@ public class CambioBase extends AppCompatActivity {
                     Boolean  matrix1, matrix2;
                     matrix1=get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector);
                     matrix2=get_elemts_pantalla_no_canonico( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector);
-
                     if( !matrix1){
                         Toast.makeText(getApplicationContext() , "Valores en conjunto de vectores 1 invalidos", Toast.LENGTH_SHORT).show();
                     }
@@ -249,21 +236,17 @@ public class CambioBase extends AppCompatActivity {
             }
         });
 
-
-
-        inicio_pantalla();
-        inicio_pantalla_no_canonico();
-
-
-        if (v_canonico.isChecked()){
+     /*   if (v_canonico.isChecked()){
             Toast.makeText(getApplicationContext() , "is true", Toast.LENGTH_SHORT).show();
             ClaseDatosPythonJava.v_canonico="Y";
         }else{
             Toast.makeText(getApplicationContext() , "is false", Toast.LENGTH_SHORT).show();
             ClaseDatosPythonJava.v_canonico="N";
-        }
+        }  */
+        inicio_pantalla();
+        inicio_pantalla_no_canonico();
+        ClaseDatosPythonJava.v_where_base = "Canonica";
     }
-
     public void Onclick(View view){
         if (view.getId()==R.id.switch1){
             if (v_canonico.isChecked()){
@@ -300,6 +283,7 @@ public class CambioBase extends AppCompatActivity {
             rad_base1.setChecked(false);
             rad_canonica.setChecked(true);
             Toast.makeText(getApplicationContext() , "Canonica", Toast.LENGTH_SHORT).show();
+            asignar_tamaños_vectores();
             inicio_pantalla_no_canonico();
         }
 
@@ -702,7 +686,6 @@ public class CambioBase extends AppCompatActivity {
        editText_b3_dato4.setText("");
        editText_b3_dato4.setEnabled(false);
 
-
        editText_b4_dato1.setText("");
        editText_b4_dato1.setEnabled(false);
        editText_b4_dato2.setText("");
@@ -713,15 +696,12 @@ public class CambioBase extends AppCompatActivity {
        editText_b4_dato4.setEnabled(false);
 
 /////////////////////////////////////////////////////
-
-
         // resultado_base.setText("");
        // textview_resultado.setText("");
         rad_base2.setChecked(false);
         rad_base1.setChecked(false);
         rad_canonica.setChecked(true);
     }
-
 
     public void inicio_pantalla_no_canonico(){
         editText2_b1_dato1.setText("");
@@ -751,7 +731,6 @@ public class CambioBase extends AppCompatActivity {
         editText2_b3_dato4.setText("");
         editText2_b3_dato4.setEnabled(false);
 
-
         editText2_b4_dato1.setText("");
         editText2_b4_dato1.setEnabled(false);
         editText2_b4_dato2.setText("");
@@ -760,7 +739,6 @@ public class CambioBase extends AppCompatActivity {
         editText2_b4_dato3.setEnabled(false);
         editText2_b4_dato4.setText("");
         editText2_b4_dato4.setEnabled(false);
-
     }
 
 

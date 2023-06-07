@@ -114,9 +114,9 @@ public class Determinar_base extends AppCompatActivity {
                         Object respuesta = pyov_validar.callAttr("main");
                         if ( ClaseDatosPythonJava.valida_base ==1  ) {
                             //abrir nueva actividad para mostrar procedimiento
-                        resultado_tamano.setText("Si es base");
+                        resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / Si es base");
                         }else{
-                            resultado_tamano.setText("No es base");
+                            resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / No es base");
                         }
                         Intent determinar_base = new Intent(getApplicationContext(), Procedimiento.class);
                         startActivity(determinar_base);
@@ -152,10 +152,10 @@ public class Determinar_base extends AppCompatActivity {
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
                             String cadena = "Resultado: El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                             textview_resultado.setText(cadena);
-                            resultado_tamano.setText("Si es base");
+                            resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / Si es base  ");
                         }else{
                             String cadena = "Resultado: El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
-                            resultado_tamano.setText("No es base");
+                            resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / No es base");
                               textview_resultado.setText(cadena);
                         }
                     }else{
