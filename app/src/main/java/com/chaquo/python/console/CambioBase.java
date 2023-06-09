@@ -82,74 +82,82 @@ public class CambioBase extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_cambio_de_base);
+        try {
+            mathView_formula1 = findViewById(R.id.mathviewFormula1);
+            mathView_formula1.setFontSize(40);
+            mathView_formula1.setScrollContainer(true);
 
-        mathView_formula1 = findViewById(R.id.mathviewFormula1);
-        mathView_formula1.setFontSize(40);
-        mathView_formula1.setScrollContainer(true);
 
+            editText_v_dato1 = findViewById(R.id.editText_v_dato1);
+            editText_v_dato2 = findViewById(R.id.editText_v_dato2);
+            editText_v_dato3 = findViewById(R.id.editText_v_dato3);
+            editText_v_dato4 = findViewById(R.id.editText_v_dato4);
+            /*base 1*/
+            editText_b1_dato1 = findViewById(R.id.editText_b1_dato1);
+            editText_b1_dato2 = findViewById(R.id.editText_b1_dato2);
+            editText_b1_dato3 = findViewById(R.id.editText_b1_dato3);
+            editText_b1_dato4 = findViewById(R.id.editText_b1_dato4);
+            editText_b2_dato1 = findViewById(R.id.editText_b2_dato1);
+            editText_b2_dato2 = findViewById(R.id.editText_b2_dato2);
+            editText_b2_dato3 = findViewById(R.id.editText_b2_dato3);
+            editText_b2_dato4 = findViewById(R.id.editText_b2_dato4);
+            editText_b3_dato1 = findViewById(R.id.editText_b3_dato1);
+            editText_b3_dato2 = findViewById(R.id.editText_b3_dato2);
+            editText_b3_dato3 = findViewById(R.id.editText_b3_dato3);
+            editText_b3_dato4 = findViewById(R.id.editText_b3_dato4);
+            editText_b4_dato1 = findViewById(R.id.editText_b4_dato1);
+            editText_b4_dato2 = findViewById(R.id.editText_b4_dato2);
+            editText_b4_dato3 = findViewById(R.id.editText_b4_dato3);
+            editText_b4_dato4 = findViewById(R.id.editText_b4_dato4);
 
-        editText_v_dato1 = findViewById(R.id.editText_v_dato1);
-        editText_v_dato2 = findViewById(R.id.editText_v_dato2);
-        editText_v_dato3 = findViewById(R.id.editText_v_dato3);
-        editText_v_dato4 = findViewById(R.id.editText_v_dato4);
-        /*base 1*/
-        editText_b1_dato1 = findViewById(R.id.editText_b1_dato1);
-        editText_b1_dato2 = findViewById(R.id.editText_b1_dato2);
-        editText_b1_dato3 = findViewById(R.id.editText_b1_dato3);
-        editText_b1_dato4 = findViewById(R.id.editText_b1_dato4);
-        editText_b2_dato1 = findViewById(R.id.editText_b2_dato1);
-        editText_b2_dato2 = findViewById(R.id.editText_b2_dato2);
-        editText_b2_dato3 = findViewById(R.id.editText_b2_dato3);
-        editText_b2_dato4 = findViewById(R.id.editText_b2_dato4);
-        editText_b3_dato1 = findViewById(R.id.editText_b3_dato1);
-        editText_b3_dato2 = findViewById(R.id.editText_b3_dato2);
-        editText_b3_dato3 = findViewById(R.id.editText_b3_dato3);
-        editText_b3_dato4 = findViewById(R.id.editText_b3_dato4);
-        editText_b4_dato1 = findViewById(R.id.editText_b4_dato1);
-        editText_b4_dato2 = findViewById(R.id.editText_b4_dato2);
-        editText_b4_dato3 = findViewById(R.id.editText_b4_dato3);
-        editText_b4_dato4 = findViewById(R.id.editText_b4_dato4);
+            /*base 2*/
+            editText2_b1_dato1 = findViewById(R.id.editText2_b1_dato1);
+            editText2_b1_dato2 = findViewById(R.id.editText2_b1_dato2);
+            editText2_b1_dato3 = findViewById(R.id.editText2_b1_dato3);
+            editText2_b1_dato4 = findViewById(R.id.editText2_b1_dato4);
+            editText2_b2_dato1 = findViewById(R.id.editText2_b2_dato1);
+            editText2_b2_dato2 = findViewById(R.id.editText2_b2_dato2);
+            editText2_b2_dato3 = findViewById(R.id.editText2_b2_dato3);
+            editText2_b2_dato4 = findViewById(R.id.editText2_b2_dato4);
+            editText2_b3_dato1 = findViewById(R.id.editText2_b3_dato1);
+            editText2_b3_dato2 = findViewById(R.id.editText2_b3_dato2);
+            editText2_b3_dato3 = findViewById(R.id.editText2_b3_dato3);
+            editText2_b3_dato4 = findViewById(R.id.editText2_b3_dato4);
+            editText2_b4_dato1 = findViewById(R.id.editText2_b4_dato1);
+            editText2_b4_dato2 = findViewById(R.id.editText2_b4_dato2);
+            editText2_b4_dato3 = findViewById(R.id.editText2_b4_dato3);
+            editText2_b4_dato4 = findViewById(R.id.editText2_b4_dato4);
 
-        /*base 2*/
-        editText2_b1_dato1 = findViewById(R.id.editText2_b1_dato1);
-        editText2_b1_dato2 = findViewById(R.id.editText2_b1_dato2);
-        editText2_b1_dato3 = findViewById(R.id.editText2_b1_dato3);
-        editText2_b1_dato4 = findViewById(R.id.editText2_b1_dato4);
-        editText2_b2_dato1 = findViewById(R.id.editText2_b2_dato1);
-        editText2_b2_dato2 = findViewById(R.id.editText2_b2_dato2);
-        editText2_b2_dato3 = findViewById(R.id.editText2_b2_dato3);
-        editText2_b2_dato4 = findViewById(R.id.editText2_b2_dato4);
-        editText2_b3_dato1 = findViewById(R.id.editText2_b3_dato1);
-        editText2_b3_dato2 = findViewById(R.id.editText2_b3_dato2);
-        editText2_b3_dato3 = findViewById(R.id.editText2_b3_dato3);
-        editText2_b3_dato4 = findViewById(R.id.editText2_b3_dato4);
-        editText2_b4_dato1 = findViewById(R.id.editText2_b4_dato1);
-        editText2_b4_dato2 = findViewById(R.id.editText2_b4_dato2);
-        editText2_b4_dato3 = findViewById(R.id.editText2_b4_dato3);
-        editText2_b4_dato4 = findViewById(R.id.editText2_b4_dato4);
+            rad_base1 = findViewById(R.id.radbtn_b1);
+            rad_base2 = findViewById(R.id.radbtn_b2);
+            rad_canonica = findViewById(R.id.radbtn_canonica);
 
-        rad_base1 = findViewById(R.id.radbtn_b1);
-        rad_base2 = findViewById(R.id.radbtn_b2);
-        rad_canonica = findViewById(R.id.radbtn_canonica);
+            textview_procedimiento2 = findViewById(R.id.textView_procedimiento2);
+            button_resultado2 = findViewById(R.id.button_resultado2);
+            button_procedimiento2 = findViewById(R.id.button_procedimiento2);
+            button_limpia = findViewById(R.id.btn_limpiar);
+            button_mas = findViewById(R.id.button_mas);
+            button_menos = findViewById(R.id.button_menos);
 
-        textview_procedimiento2 = findViewById(R.id.textView_procedimiento2);
-        button_resultado2 = findViewById(R.id.button_resultado2);
-        button_procedimiento2 = findViewById(R.id.button_procedimiento2);
-        button_limpia = findViewById(R.id.btn_limpiar);
-        button_mas = findViewById(R.id.button_mas);
-        button_menos = findViewById(R.id.button_menos);
+            v_canonico = findViewById(R.id.switch1);
+            establecer_lon_canonico = findViewById(R.id.button_establecer_vector);
 
-        v_canonico = findViewById(R.id.switch1);
-        establecer_lon_canonico = findViewById(R.id.button_establecer_vector);
+        }catch (Error e) {
+            Toast.makeText(getApplicationContext() , "Ocurrio :" + e.toString(), Toast.LENGTH_SHORT).show();
+        }
 
-        // Revisar si Python está iniciado
-        if (!Python.isStarted()) {
-            Python.start(new AndroidPlatform(this));
+        try {
+            // Revisar si Python está iniciado
+            if (!Python.isStarted()) {
+                Python.start(new AndroidPlatform(this));
+            }
+        }catch (Error e) {
+        Toast.makeText(getApplicationContext() , "Python :" + e.toString(), Toast.LENGTH_SHORT).show();
         }
         // Obtener una instancia Python, punto de inicio para enlace Java-Python
         final Python py = Python.getInstance();
-
 
         button_menos.setOnClickListener(new View.OnClickListener() {
             @Override

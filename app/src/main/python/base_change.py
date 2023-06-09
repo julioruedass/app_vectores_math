@@ -216,15 +216,6 @@ def leerVector():
     A=Matrix(A).T
     return A
 
-
-def leerBase(dim):
-    A = []
-    for i in range(dim):
-        v1str = input(f"Ingrese el vector {i + 1} separados por comas\n")
-        A.append(v1str.split(","))
-    return Matrix(A).T
-
-
 def cambioDeBase(v,B1,B2):
     vp = B1 * v
     if v and B1 != eye(B1.shape[0]):
@@ -351,7 +342,6 @@ def iniciar_cambio() :
     pprint(BC)
     dato_1 = "Matrix 1"
     Datos.dinamicSetvalue(dato_1, array_to_LaTeX(BC));
-
     print("MTR2: ")
     pprint(BT)
     dato_1 = "Matrix 2"

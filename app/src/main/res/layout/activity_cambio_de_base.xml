@@ -432,7 +432,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b2_dato1"
+                    android:id="@+id/editText2_b1_dato2"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -444,7 +444,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b3_dato1"
+                    android:id="@+id/editText2_b1_dato3"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -456,7 +456,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b4_dato1"
+                    android:id="@+id/editText2_b1_dato4"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -476,7 +476,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText2_b1_dato2"
+                    android:id="@+id/editText2_b2_dato1"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -500,7 +500,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b3_dato2"
+                    android:id="@+id/editText2_b2_dato3"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -512,7 +512,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b4_dato2"
+                    android:id="@+id/editText2_b2_dato4"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -531,7 +531,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText2_b1_dato3"
+                    android:id="@+id/editText2_b3_dato1"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -543,7 +543,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b2_dato3"
+                    android:id="@+id/editText2_b3_dato2"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -567,7 +567,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b4_dato3"
+                    android:id="@+id/editText2_b3_dato4"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -586,7 +586,7 @@
                 android:orientation="horizontal">
 
                 <EditText
-                    android:id="@+id/editText2_b1_dato4"
+                    android:id="@+id/editText2_b4_dato1"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -598,7 +598,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b2_dato4"
+                    android:id="@+id/editText2_b4_dato2"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
@@ -610,7 +610,7 @@
                     tools:ignore="TouchTargetSizeCheck" />
 
                 <EditText
-                    android:id="@+id/editText2_b3_dato4"
+                    android:id="@+id/editText2_b4_dato3"
                     android:layout_width="30dp"
                     android:layout_height="wrap_content"
                     android:autofillHints=""
