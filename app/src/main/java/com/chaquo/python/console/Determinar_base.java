@@ -112,12 +112,17 @@ public class Determinar_base extends AppCompatActivity {
                         PyObject pyov_validar = py.getModule("main_determinar_base");
                         // Llamar función Python y especificar parámetros si existen
                         Object respuesta = pyov_validar.callAttr("main");
-                        if ( ClaseDatosPythonJava.valida_base ==1  ) {
-                            //abrir nueva actividad para mostrar procedimiento
-                        resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / Si es base");
+                        String cadena ="";
+                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                             cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            textview_resultado.setText(cadena);
+                            resultado_tamano.setText(  " Si es base  ");
                         }else{
-                            resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / No es base");
+                             cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            resultado_tamano.setText( " No es base");
+                            textview_resultado.setText(cadena);
                         }
+                        ClaseDatosPythonJava.dinamicSetvalue(cadena,"" );
                         Intent determinar_base = new Intent(getApplicationContext(), Procedimiento.class);
                         startActivity(determinar_base);
 
@@ -149,15 +154,16 @@ public class Determinar_base extends AppCompatActivity {
                         PyObject pyov_validar = py.getModule("main_determinar_base");
                         // Llamar función Python y especificar parámetros si existen
                         Object respuesta = pyov_validar.callAttr("main");
+
+                        String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            String cadena = "Resultado: El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
-                            textview_resultado.setText(cadena);
-                            resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / Si es base  ");
+                             cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            resultado_tamano.setText(  " Si es base  ");
                         }else{
-                            String cadena = "Resultado: El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
-                            resultado_tamano.setText(  ClaseDatosPythonJava.v_independiente + " / No es base");
-                              textview_resultado.setText(cadena);
+                             cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            resultado_tamano.setText( " No es base");
                         }
+                        textview_resultado.setText(cadena);
                     }else{
                         resultado_tamano.setText("Datos invalidos");
                     }

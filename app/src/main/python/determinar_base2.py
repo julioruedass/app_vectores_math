@@ -51,25 +51,25 @@ def Matriz2(modo):
     print("Matriz A original de vectores")
     pprint(compo)
     if compo > 0:
-        V1.append(Matrix(Datos.d_vector1))
+        V1.append(Matrix(Datos.d2_vector1))
         STRING_VECTOR_1 =crear_matrix_porvector(V1)
         A.append(STRING_VECTOR_1.split(","))
         print("Vector 1  :")
         pprint(V1)
     if compo > 1:
-        V2.append(Matrix(Datos.d_vector2))
+        V2.append(Matrix(Datos.d2_vector2))
         STRING_VECTOR_2 =crear_matrix_porvector(V2)
         A.append(STRING_VECTOR_2.split(","))
         print("Vector 2  :")
         pprint(V2)
     if compo > 2:
-        V3.append(Matrix(Datos.d_vector3))
+        V3.append(Matrix(Datos.d2_vector3))
         STRING_VECTOR_3 =crear_matrix_porvector(V3)
         A.append(STRING_VECTOR_3.split(","))
         print("Vector 3  :")
         pprint(V3)
     if compo > 3:
-        V4.append(Matrix(Datos.d_vector4))
+        V4.append(Matrix(Datos.d2_vector4))
         STRING_VECTOR_4 =crear_matrix_porvector(V4)
         A.append(STRING_VECTOR_4.split(","))
         print("Vector 4 :")
@@ -93,7 +93,7 @@ def Matriz2(modo):
                 LETRAS="W,X"
         if tam_vectores == 3:
             if (modo =="DETERMINANTE"):
-               # CEROS =[0,0,0]
+                # CEROS =[0,0,0]
                 CEROS ="0,0,0"
             if (modo =="GENERADOR"):
                 #LETRAS =["w","x","y"]
@@ -459,21 +459,21 @@ def lineal_dependiente():
             Datos.dinamicSetvalue(dato_1,"" );
             Datos.valida_base =0
         if  resultado[0] == True and resultado[1] == False :
+            dato_1 = "Es linealmente independiente"
+            Datos.v_independiente =dato_1
             try:
-                dato_1 = "Es linealmente independiente"
-                Datos.v_independiente =dato_1
                 dato_1 = "    Iniciar Generador"
                 Datos.dinamicSetvalue(dato_1,"" );
                 Datos.dinamicSetvalue("Matrix :",array_to_LaTeX(Matrix(mat_aum2)) );
                 llamada_generador(nm2)
             except:
                 print('Ocurrio un error en función de generador ')
-                dato_1 = Datos.v_independiente
-                Datos.dinamicSetvalue(dato_1,"" );
                 dato_1 = "Ocurrio un error en función de generador"
                 Datos.dinamicSetvalue(dato_1,"" );
                 Datos.valida_base =0
         else:
+            dato_1 = "Es linealmente dependiente"
+            Datos.v_independiente =dato_1
             dato_1 = "   Iniciar Generador"
             Datos.dinamicSetvalue(dato_1,"" );
             if resultado[1] == True:
@@ -481,13 +481,12 @@ def lineal_dependiente():
                 dato_1 = "La relaciòn de # Vectores y con el tamaño de vectores es invalida"
                 Datos.dinamicSetvalue(dato_1,"" );
             print("El conjunto generador NO genera base")
-            dato_1 = Datos.v_independiente
-            Datos.dinamicSetvalue(dato_1,"" );
             dato_1 = "El conjunto generador NO genera base"
             Datos.dinamicSetvalue(dato_1,"" );
             Datos.valida_base =0
     except:
         Datos.v_independiente ="No valida "
+        Datos.v_independiente="Ocurrio un evento inseperado"
         print('Ocurrio un evento con el manejo de vectores ')
         dato_1 = "Ocurrio un evento con el manejo de vectores "
         Datos.dinamicSetvalue(dato_1,"" );

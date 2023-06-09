@@ -66,11 +66,10 @@ public class CambioBase extends AppCompatActivity {
 
     Switch v_canonico;
     MTMathView mathView_formula1;
-
+    TextView resultado_base;
 
     EditText editText_respuesta2;
     TextView textview_resultado2;
-    TextView textview_procedimiento2;
     Button button_resultado2;
     Button button_limpia;
     Button button_mas,button_menos;
@@ -88,8 +87,7 @@ public class CambioBase extends AppCompatActivity {
             mathView_formula1 = findViewById(R.id.mathviewFormula1);
             mathView_formula1.setFontSize(40);
             mathView_formula1.setScrollContainer(true);
-
-
+            resultado_base = findViewById(R.id.textView90);
             editText_v_dato1 = findViewById(R.id.editText_v_dato1);
             editText_v_dato2 = findViewById(R.id.editText_v_dato2);
             editText_v_dato3 = findViewById(R.id.editText_v_dato3);
@@ -134,7 +132,6 @@ public class CambioBase extends AppCompatActivity {
             rad_base2 = findViewById(R.id.radbtn_b2);
             rad_canonica = findViewById(R.id.radbtn_canonica);
 
-            textview_procedimiento2 = findViewById(R.id.textView_procedimiento2);
             button_resultado2 = findViewById(R.id.button_resultado2);
             button_procedimiento2 = findViewById(R.id.button_procedimiento2);
             button_limpia = findViewById(R.id.btn_limpiar);
@@ -148,15 +145,16 @@ public class CambioBase extends AppCompatActivity {
             Toast.makeText(getApplicationContext() , "Ocurrio :" + e.toString(), Toast.LENGTH_SHORT).show();
         }
 
-        try {
-            // Revisar si Python está iniciado
-            if (!Python.isStarted()) {
-                Python.start(new AndroidPlatform(this));
-            }
-        }catch (Error e) {
+        /* try {
+       }catch (Error e) {
         Toast.makeText(getApplicationContext() , "Python :" + e.toString(), Toast.LENGTH_SHORT).show();
-        }
+        }*/
         // Obtener una instancia Python, punto de inicio para enlace Java-Python
+        // Revisar si Python está iniciado
+        if (!Python.isStarted()) {
+            Python.start(new AndroidPlatform(this));
+        }
+
         final Python py = Python.getInstance();
 
         button_menos.setOnClickListener(new View.OnClickListener() {
@@ -206,6 +204,30 @@ public class CambioBase extends AppCompatActivity {
                ClaseDatosPythonJava.vaciar_etiquetas();
                if( ClaseDatosPythonJava.v_where_base == "Canonica"){
                    if( get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector)){
+
+                       PyObject pyov_validar3 = py.getModule("main_determinar_base");
+                       // Llamar función Python y especificar parámetros si existen
+                       Object respuesta2 = pyov_validar3.callAttr("main");
+                       String cadena ="";
+                       if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                           cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }else{
+                           cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }
+                       ClaseDatosPythonJava.vaciar_etiquetas();
+                       PyObject pyov_validar4 = py.getModule("main_determinar_base2");
+                       // Llamar función Python y especificar parámetros si existen
+                       Object respuesta4 = pyov_validar3.callAttr("main");
+                       String cadena2 ="";
+                       if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                           cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }else{
+                           cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }
+                       ClaseDatosPythonJava.vaciar_etiquetas();
+                       resultado_base.setText(cadena+ cadena2);
+
+
                        PyObject pyov_validar = py.getModule("main_base_change");
                        // Llamar función Python y especificar parámetros si existen
                        Object respuesta = pyov_validar.callAttr("main");
@@ -225,6 +247,28 @@ public class CambioBase extends AppCompatActivity {
                        Toast.makeText(getApplicationContext() , "Valores en conjunto de vectores 2 invalidos", Toast.LENGTH_SHORT).show();
                    }
                    if( matrix1 && matrix2){
+                       PyObject pyov_validar3 = py.getModule("main_determinar_base");
+                       // Llamar función Python y especificar parámetros si existen
+                       Object respuesta2 = pyov_validar3.callAttr("main");
+                       String cadena ="";
+                       if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                           cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }else{
+                           cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }
+                       ClaseDatosPythonJava.vaciar_etiquetas();
+                       PyObject pyov_validar4 = py.getModule("main_determinar_base2");
+                       // Llamar función Python y especificar parámetros si existen
+                       Object respuesta4 = pyov_validar4.callAttr("main");
+                       String cadena2 ="";
+                       if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                           cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }else{
+                           cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       }
+                       resultado_base.setText(cadena+ cadena2);
+                       ClaseDatosPythonJava.vaciar_etiquetas();
+                       ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena,"");
                        PyObject pyov_validar = py.getModule("main_base_change");
                        // Llamar función Python y especificar parámetros si existen
                        Object respuesta = pyov_validar.callAttr("main");
@@ -243,11 +287,32 @@ public class CambioBase extends AppCompatActivity {
                 ClaseDatosPythonJava.vaciar_etiquetas();
                 if( ClaseDatosPythonJava.v_where_base == "Canonica"){
                     if( get_elemts_pantalla( ClaseDatosPythonJava.tamano_vector, ClaseDatosPythonJava.tamano_vector)){
+                        PyObject pyov_validar3 = py.getModule("main_determinar_base");
+                        // Llamar función Python y especificar parámetros si existen
+                        Object respuesta2 = pyov_validar3.callAttr("main");
+                        String cadena ="";
+                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                            cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }else{
+                            cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }
+                        ClaseDatosPythonJava.vaciar_etiquetas();
+                        PyObject pyov_validar4 = py.getModule("main_determinar_base2");
+                        // Llamar función Python y especificar parámetros si existen
+                        Object respuesta4 = pyov_validar4.callAttr("main");
+                        String cadena2 ="";
+                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                            cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }else{
+                            cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }
+                        resultado_base.setText(cadena+ cadena2);
+                        ClaseDatosPythonJava.vaciar_etiquetas();
                         PyObject pyov_validar = py.getModule("main_base_change");
                         // Llamar función Python y especificar parámetros si existen
                         Object respuesta = pyov_validar.callAttr("main");
-
                         mathView_formula1.setLatex(ClaseDatosPythonJava.latexMatriz);
+                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena,"");
                         Intent ortonormal_procedimiento = new Intent(getApplicationContext(), Procedimiento.class);
                         startActivity(ortonormal_procedimiento);
 
@@ -266,10 +331,35 @@ public class CambioBase extends AppCompatActivity {
                         Toast.makeText(getApplicationContext() , "Valores en conjunto de vectores 2 invalidos", Toast.LENGTH_SHORT).show();
                     }
                     if( matrix1 && matrix2){
+
+                        PyObject pyov_validar3 = py.getModule("main_determinar_base");
+                        // Llamar función Python y especificar parámetros si existen
+                        Object respuesta2 = pyov_validar3.callAttr("main");
+                        String cadena ="";
+                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                            cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }else{
+                            cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }
+                        ClaseDatosPythonJava.vaciar_etiquetas();
+                        PyObject pyov_validar4 = py.getModule("main_determinar_base2");
+                        // Llamar función Python y especificar parámetros si existen
+                        Object respuesta4 = pyov_validar4.callAttr("main");
+                        String cadena2 ="";
+                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                            cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }else{
+                            cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                        }
+                        resultado_base.setText(cadena+ cadena2);
+                        ClaseDatosPythonJava.vaciar_etiquetas();
+
+
                         PyObject pyov_validar = py.getModule("main_base_change");
                         // Llamar función Python y especificar parámetros si existen
                         Object respuesta = pyov_validar.callAttr("main");
                         mathView_formula1.setLatex(ClaseDatosPythonJava.latexMatriz);
+                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena,"");
                         Intent ortonormal_procedimiento = new Intent(getApplicationContext(), Procedimiento.class);
                         startActivity(ortonormal_procedimiento);
 
@@ -291,6 +381,7 @@ public class CambioBase extends AppCompatActivity {
         ClaseDatosPythonJava.tamano_vector=0;
         ClaseDatosPythonJava.componentes=0;
         rad_canonica.setChecked(true);
+        resultado_base.setText("");
         editText_v_dato1.setText("");
         editText_v_dato2.setText("");
         editText_v_dato3.setText("");
@@ -347,6 +438,7 @@ public class CambioBase extends AppCompatActivity {
         ClaseDatosPythonJava.vaciar_etiquetas();
         ClaseDatosPythonJava.tamano_vector=0;
         ClaseDatosPythonJava.componentes=0;
+        resultado_base.setText("");
         rad_canonica.setChecked(true);
         editText_v_dato1.setText("");
         editText_v_dato2.setText("");
@@ -354,6 +446,8 @@ public class CambioBase extends AppCompatActivity {
         editText_v_dato4.setText("");
 
 }
+
+
 
     private Boolean v_vect( Pattern pat,String v_vect){
         Boolean validacion = false;

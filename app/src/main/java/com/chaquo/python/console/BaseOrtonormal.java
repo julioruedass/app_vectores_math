@@ -125,19 +125,22 @@ public class BaseOrtonormal extends AppCompatActivity {
                         PyObject pyov_validar = py.getModule("main_determinar_base");
                         // Llamar función Python y especificar parámetros si existen
                         Object respuesta = pyov_validar.callAttr("main");
+                        String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            isBase="Si es base";
-                            resultado_tamano.setText("Si es base");
+                            cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            resultado_tamano.setText(" Si es base");
+                            resultado_base.setText( ClaseDatosPythonJava.v_independiente + "\n Si es base");
                         }else{
-                            isBase="No es base";
-                            resultado_tamano.setText("No es base");
+                            cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            resultado_tamano.setText("-No es base");
+                            resultado_base.setText( ClaseDatosPythonJava.v_independiente + "\n No es base");
                         }
                         ClaseDatosPythonJava.vaciar_etiquetas();
                         //abrir nueva actividad para mostrar procedimiento
                         PyObject pyo = py.getModule("main");
                         // Llamar función Python y especificar parámetros si existen
                         Object obj = pyo.callAttr("main");
-                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  isBase,"");
+                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena,"");
 
                         Intent ortonormal_procedimiento = new Intent(getApplicationContext(), Procedimiento.class);
                         startActivity(ortonormal_procedimiento);
@@ -168,12 +171,13 @@ public class BaseOrtonormal extends AppCompatActivity {
                        PyObject pyov_validar = py.getModule("main_determinar_base");
                        // Llamar función Python y especificar parámetros si existen
                        Object respuesta = pyov_validar.callAttr("main");
+                       String cadena ="";
                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                           resultado_tamano.setText("Si es base");
-                           resultado_base.setText("Si es base");
+                           cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           resultado_tamano.setText(" Si es base");
                        }else{
+                           cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                            resultado_tamano.setText("-No es base");
-                           resultado_base.setText("No es base");
                        }
                        ClaseDatosPythonJava.vaciar_etiquetas();
                        // Crear objeto Python para vincular con programa Python
@@ -182,7 +186,7 @@ public class BaseOrtonormal extends AppCompatActivity {
                        Object obj = pyo.callAttr("main");
                        textview_resultado.setText("Resultado: ");
                        mathView_formula1.setLatex(ClaseDatosPythonJava.latexMatriz);
-
+                       resultado_base.setText( cadena);
 
                    }else{
                        resultado_tamano.setText("Datos invalidos");
