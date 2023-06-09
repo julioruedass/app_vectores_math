@@ -100,7 +100,7 @@
             android:id="@+id/button_establecer_vector"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Establecer"></Button>
+            android:text="Empezar"></Button>
     </LinearLayout>
 
     <TextView
@@ -140,504 +140,554 @@
             android:onClick="Onclick"
             android:text="Canonica" />
 
-
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/matrix1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/base1_contenedor"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingStart="10dp"
-            android:text="@string/textview_base1"
-            android:textColor="#546E7A"
-            tools:ignore="TextContrastCheck,TextContrastCheck" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-
-            <EditText
-                android:id="@+id/editText_b1_dato1"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b2_dato1"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b3_dato1"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b4_dato1"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editText_b1_dato2"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b2_dato2"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b3_dato2"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b4_dato2"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editText_b1_dato3"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b2_dato3"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b3_dato3"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b4_dato3"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <EditText
-                android:id="@+id/editText_b1_dato4"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b2_dato4"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b3_dato4"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-
-            <EditText
-                android:id="@+id/editText_b4_dato4"
-                android:layout_width="30dp"
-                android:layout_height="wrap_content"
-                android:autofillHints=""
-                android:ems="10"
-                android:hint="@string/edittext_ayuda"
-                android:inputType="number|phone"
-                android:minHeight="35dp"
-                android:text=""
-                tools:ignore="TouchTargetSizeCheck" />
-        </LinearLayout>
-    </LinearLayout>
+    <HorizontalScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
     <LinearLayout
-        android:id="@+id/matrix2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-    <TextView
-        android:id="@+id/textView_base2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/textview_base2"
-        android:textColor="#546E7A"
-        android:paddingStart="10dp"
-        tools:ignore="TextContrastCheck" />
+        android:orientation="horizontal">
 
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        >
-
-
-        <EditText
-            android:id="@+id/editText2_b1_dato1"
-            android:layout_width="30dp"
+        <LinearLayout
+            android:id="@+id/matrix1"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
+            android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editText2_b2_dato1"
-            android:layout_width="30dp"
+            <TextView
+                android:id="@+id/base1_contenedor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:text="@string/textview_base1"
+                android:textColor="#546E7A"
+                tools:ignore="TextContrastCheck,TextContrastCheck" />
+
+            <LinearLayout
+                android:paddingLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/editText_b1_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b2_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b3_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b4_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText_b1_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b2_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b3_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b4_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText_b1_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b2_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b3_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b4_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:paddingLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText_b1_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b2_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b3_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText_b4_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/matrix2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
+            android:orientation="vertical"
+            android:paddingLeft="30px">
 
-        <EditText
-            android:id="@+id/editText2_b3_dato1"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
+            <TextView
+                android:id="@+id/textView_base2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text="@string/textview_base2"
+                android:textColor="#546E7A"
+                tools:ignore="TextContrastCheck" />
 
-        <EditText
-            android:id="@+id/editText2_b4_dato1"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
 
+            <LinearLayout
+                android:paddingLeft="20px"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:orientation="horizontal">
+
+
+                <EditText
+                    android:id="@+id/editText2_b1_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b2_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b3_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b4_dato1"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText2_b1_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b2_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b3_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b4_dato2"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText2_b1_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b2_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b3_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b4_dato3"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/editText2_b1_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b2_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b3_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+
+                <EditText
+                    android:id="@+id/editText2_b4_dato4"
+                    android:layout_width="30dp"
+                    android:layout_height="wrap_content"
+                    android:autofillHints=""
+                    android:ems="10"
+                    android:hint="@string/edittext_ayuda"
+                    android:inputType="number|phone"
+                    android:minHeight="35dp"
+                    android:text=""
+                    tools:ignore="TouchTargetSizeCheck" />
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <EditText
-            android:id="@+id/editText2_b1_dato2"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-
-        <EditText
-            android:id="@+id/editText2_b2_dato2"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-
-        <EditText
-            android:id="@+id/editText2_b3_dato2"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-
-        <EditText
-            android:id="@+id/editText2_b4_dato2"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <EditText
-            android:id="@+id/editText2_b1_dato3"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-
-        <EditText
-            android:id="@+id/editText2_b2_dato3"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-
-        <EditText
-            android:id="@+id/editText2_b3_dato3"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <EditText
-            android:id="@+id/editText2_b4_dato3"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <EditText
-            android:id="@+id/editText2_b1_dato4"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck" />
-
-        <EditText
-            android:id="@+id/editText2_b2_dato4"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-
-        <EditText
-            android:id="@+id/editText2_b3_dato4"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-
-        <EditText
-            android:id="@+id/editText2_b4_dato4"
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:autofillHints=""
-            android:ems="10"
-            android:hint="@string/edittext_ayuda"
-            android:text=""
-            android:inputType="number|phone"
-            android:minHeight="35dp"
-            tools:ignore="TouchTargetSizeCheck"  />
-    </LinearLayout>
-    </LinearLayout>
-
+    </HorizontalScrollView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/button_resultado2"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_Resultado" />
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/button_resultado2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_Resultado" />
+
+            <Button
+                android:id="@+id/btn_limpiar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="f_limpiar_pantalla"
+                android:text="Limpiar" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+
+
+            <Button
+                android:id="@+id/button_menos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alejar (-)" />
+
+            <Button
+                android:id="@+id/button_mas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Acercar (+)" />
+        </LinearLayout>
 
         <TextView
             android:id="@+id/textView_resultado2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/textview_Resultado2" />
-
 
         <com.agog.mathdisplay.MTMathView
             android:id="@+id/mathviewFormula1"

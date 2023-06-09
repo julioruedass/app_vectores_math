@@ -72,6 +72,10 @@ public class CambioBase extends AppCompatActivity {
     TextView textview_resultado2;
     TextView textview_procedimiento2;
     Button button_resultado2;
+    Button button_limpia;
+    Button button_mas,button_menos;
+
+
     Button establecer_lon_canonico;
     Button button_procedimiento2;
 
@@ -132,6 +136,10 @@ public class CambioBase extends AppCompatActivity {
         textview_procedimiento2 = findViewById(R.id.textView_procedimiento2);
         button_resultado2 = findViewById(R.id.button_resultado2);
         button_procedimiento2 = findViewById(R.id.button_procedimiento2);
+        button_limpia = findViewById(R.id.btn_limpiar);
+        button_mas = findViewById(R.id.button_mas);
+        button_menos = findViewById(R.id.button_menos);
+
         v_canonico = findViewById(R.id.switch1);
         establecer_lon_canonico = findViewById(R.id.button_establecer_vector);
 
@@ -141,6 +149,32 @@ public class CambioBase extends AppCompatActivity {
         }
         // Obtener una instancia Python, punto de inicio para enlace Java-Python
         final Python py = Python.getInstance();
+
+
+        button_menos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if ( ClaseDatosPythonJava.tamano_letra > 30 ){
+                    ClaseDatosPythonJava.tamano_letra=ClaseDatosPythonJava.tamano_letra-2;
+                    mathView_formula1.setFontSize(ClaseDatosPythonJava.tamano_letra);
+                }
+            }
+        });
+
+
+        /*clic al boton de aumento de tamaño de letra*/
+        button_mas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if ( ClaseDatosPythonJava.tamano_letra < 50){
+                    ClaseDatosPythonJava.tamano_letra=ClaseDatosPythonJava.tamano_letra+2;
+                    mathView_formula1.setFontSize(ClaseDatosPythonJava.tamano_letra);
+                }
+            }
+        });
+
 
         establecer_lon_canonico.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -246,6 +280,13 @@ public class CambioBase extends AppCompatActivity {
         inicio_pantalla();
         inicio_pantalla_no_canonico();
         ClaseDatosPythonJava.v_where_base = "Canonica";
+        ClaseDatosPythonJava.tamano_vector=0;
+        ClaseDatosPythonJava.componentes=0;
+        rad_canonica.setChecked(true);
+        editText_v_dato1.setText("");
+        editText_v_dato2.setText("");
+        editText_v_dato3.setText("");
+        editText_v_dato4.setText("");
     }
     public void Onclick(View view){
         if (view.getId()==R.id.switch1){
@@ -289,6 +330,22 @@ public class CambioBase extends AppCompatActivity {
 
 
     }
+
+
+    public  void f_limpiar_pantalla(View  view){
+        inicio_pantalla();
+        inicio_pantalla_no_canonico();
+        ClaseDatosPythonJava.v_where_base = "Canonica";
+        ClaseDatosPythonJava.vaciar_etiquetas();
+        ClaseDatosPythonJava.tamano_vector=0;
+        ClaseDatosPythonJava.componentes=0;
+        rad_canonica.setChecked(true);
+        editText_v_dato1.setText("");
+        editText_v_dato2.setText("");
+        editText_v_dato3.setText("");
+        editText_v_dato4.setText("");
+
+}
 
     private Boolean v_vect( Pattern pat,String v_vect){
         Boolean validacion = false;

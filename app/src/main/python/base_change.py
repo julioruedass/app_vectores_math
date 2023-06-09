@@ -159,9 +159,9 @@ def leerMatriz_in():
         print(" Vector 3")
         pprint(D)
     if compo > 3:
-        A.append(Matrix(Datos.d_vector4))
+        A.append(Matrix(Datos.d_vector4).T)
         E = []
-        E.append(Matrix(Datos.d_vector4))
+        E.append(Matrix(Datos.d_vector4).T)
         print(" Vector 4")
         pprint(E)
     print(" ---------------- Iniciar -------------------------")
@@ -233,6 +233,8 @@ def cambioDeBase(v,B1,B2):
         dato_1 = "Se multiplicó el vector por su base para hacerlo canonico"
         Datos.dinamicSetvalue(dato_1, array_to_LaTeX(vp));
     inv = inversa(B2)
+    dato_1 = "Inversa :"
+    Datos.dinamicSetvalue(dato_1, array_to_LaTeX(inv));
     if inv != None:
         vp = inv * vp
         if v:
