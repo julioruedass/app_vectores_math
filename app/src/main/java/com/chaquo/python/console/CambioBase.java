@@ -292,7 +292,7 @@ public class CambioBase extends AppCompatActivity {
                         Object respuesta2 = pyov_validar3.callAttr("main");
                         String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena =  "\nResultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }else{
                             cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }
@@ -312,7 +312,7 @@ public class CambioBase extends AppCompatActivity {
                         // Llamar función Python y especificar parámetros si existen
                         Object respuesta = pyov_validar.callAttr("main");
                         mathView_formula1.setLatex(ClaseDatosPythonJava.latexMatriz);
-                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena,"");
+                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena+ cadena2,"");
                         Intent ortonormal_procedimiento = new Intent(getApplicationContext(), Procedimiento.class);
                         startActivity(ortonormal_procedimiento);
 
@@ -337,7 +337,7 @@ public class CambioBase extends AppCompatActivity {
                         Object respuesta2 = pyov_validar3.callAttr("main");
                         String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena =  "\nResultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }else{
                             cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }
@@ -359,7 +359,7 @@ public class CambioBase extends AppCompatActivity {
                         // Llamar función Python y especificar parámetros si existen
                         Object respuesta = pyov_validar.callAttr("main");
                         mathView_formula1.setLatex(ClaseDatosPythonJava.latexMatriz);
-                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena,"");
+                        ClaseDatosPythonJava.dinamicSetvalue(" - " +  cadena+ cadena2,"");
                         Intent ortonormal_procedimiento = new Intent(getApplicationContext(), Procedimiento.class);
                         startActivity(ortonormal_procedimiento);
 
