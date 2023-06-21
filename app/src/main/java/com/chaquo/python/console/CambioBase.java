@@ -210,22 +210,29 @@ public class CambioBase extends AppCompatActivity {
                        Object respuesta2 = pyov_validar3.callAttr("main");
                        String cadena ="";
                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                           cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena =  "Resultado Matrix 1 : Si es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                        }else{
-                           cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena = "Resultado Matrix 1 : No es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                        }
                        ClaseDatosPythonJava.vaciar_etiquetas();
-                       PyObject pyov_validar4 = py.getModule("main_determinar_base2");
-                       // Llamar función Python y especificar parámetros si existen
-                       Object respuesta4 = pyov_validar3.callAttr("main");
-                       String cadena2 ="";
-                       if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                           cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
-                       }else{
-                           cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                       resultado_base.setText(cadena);
+
+                       //No es necesario
+                       /*if (ClaseDatosPythonJava.v_where_base != "Canonica"){
+                           PyObject pyov_validar4 = py.getModule("main_determinar_base2");
+                           // Llamar función Python y especificar parámetros si existen
+                           Object respuesta4 = pyov_validar3.callAttr("main");
+                           String cadena2 ="";
+                           if ( ClaseDatosPythonJava.valida_base ==1 ) {
+                               cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           }else{
+                               cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           }
+                           ClaseDatosPythonJava.vaciar_etiquetas();
+                           resultado_base.setText(cadena+ cadena2);
                        }
-                       ClaseDatosPythonJava.vaciar_etiquetas();
-                       resultado_base.setText(cadena+ cadena2);
+                       */
+
 
 
                        PyObject pyov_validar = py.getModule("main_base_change");
@@ -252,9 +259,9 @@ public class CambioBase extends AppCompatActivity {
                        Object respuesta2 = pyov_validar3.callAttr("main");
                        String cadena ="";
                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                           cadena =  "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena =  "Resultado Matrix 1 : Si es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                        }else{
-                           cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena = "Resultado Matrix 1 : No es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                        }
                        ClaseDatosPythonJava.vaciar_etiquetas();
                        PyObject pyov_validar4 = py.getModule("main_determinar_base2");
@@ -262,9 +269,9 @@ public class CambioBase extends AppCompatActivity {
                        Object respuesta4 = pyov_validar4.callAttr("main");
                        String cadena2 ="";
                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                           cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena2 =  "\nResultado Matrix 2 : Si es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                        }else{
-                           cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena2 = "\nResultado Matrix 2 : No es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                        }
                        resultado_base.setText(cadena+ cadena2);
                        ClaseDatosPythonJava.vaciar_etiquetas();
@@ -292,9 +299,9 @@ public class CambioBase extends AppCompatActivity {
                         Object respuesta2 = pyov_validar3.callAttr("main");
                         String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            cadena =  "\nResultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena =  "\nResultado Matrix 1  : Si es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }else{
-                            cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena = "Resultado Matrix 1 : No es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }
                         ClaseDatosPythonJava.vaciar_etiquetas();
                         PyObject pyov_validar4 = py.getModule("main_determinar_base2");
@@ -302,9 +309,9 @@ public class CambioBase extends AppCompatActivity {
                         Object respuesta4 = pyov_validar4.callAttr("main");
                         String cadena2 ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena2 =  "\nResultado Matrix 2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }else{
-                            cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena2 = "\nResultado Matrix 2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }
                         resultado_base.setText(cadena+ cadena2);
                         ClaseDatosPythonJava.vaciar_etiquetas();
@@ -337,9 +344,9 @@ public class CambioBase extends AppCompatActivity {
                         Object respuesta2 = pyov_validar3.callAttr("main");
                         String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            cadena =  "\nResultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena =  "\nResultado Matrix 1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }else{
-                            cadena = "Resultado Base1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena = "Resultado Matrix 1 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }
                         ClaseDatosPythonJava.vaciar_etiquetas();
                         PyObject pyov_validar4 = py.getModule("main_determinar_base2");
@@ -347,9 +354,9 @@ public class CambioBase extends AppCompatActivity {
                         Object respuesta4 = pyov_validar4.callAttr("main");
                         String cadena2 ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            cadena2 =  "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena2 =  "\nResultado Matrix 2 : Si es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }else{
-                            cadena2 = "\nResultado Base2 : "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena2 = "\nResultado Matrix 2 : No es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                         }
                         resultado_base.setText(cadena+ cadena2);
                         ClaseDatosPythonJava.vaciar_etiquetas();

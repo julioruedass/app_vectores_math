@@ -127,11 +127,11 @@ public class BaseOrtonormal extends AppCompatActivity {
                         Object respuesta = pyov_validar.callAttr("main");
                         String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                            cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
-                            resultado_tamano.setText(" Si es base");
+                            cadena =  "Resultado:  Si es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            resultado_tamano.setText("-Si es base");
                             resultado_base.setText( ClaseDatosPythonJava.v_independiente + "\n Si es base");
                         }else{
-                            cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                            cadena = "Resultado:  No es base\n "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                             resultado_tamano.setText("-No es base");
                             resultado_base.setText( ClaseDatosPythonJava.v_independiente + "\n No es base");
                         }
@@ -173,10 +173,10 @@ public class BaseOrtonormal extends AppCompatActivity {
                        Object respuesta = pyov_validar.callAttr("main");
                        String cadena ="";
                        if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                           cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena =  "Resultado: Si es base\n"+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                            resultado_tamano.setText(" Si es base");
                        }else{
-                           cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                           cadena = "Resultado: No es base\n"+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                            resultado_tamano.setText("-No es base");
                        }
                        ClaseDatosPythonJava.vaciar_etiquetas();

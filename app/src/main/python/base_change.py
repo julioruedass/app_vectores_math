@@ -344,7 +344,8 @@ def iniciar_cambio() :
     Datos.dinamicSetvalue(dato_1, array_to_LaTeX(BC));
     print("MTR2: ")
     pprint(BT)
-    dato_1 = "Matrix 2"
-    Datos.dinamicSetvalue(dato_1, array_to_LaTeX(BT));
+    if sn != "Canonica":
+        dato_1 = "Matrix 2"
+        Datos.dinamicSetvalue(dato_1, array_to_LaTeX(BT));
     cambioDeBase(v,BC,BT)
 
