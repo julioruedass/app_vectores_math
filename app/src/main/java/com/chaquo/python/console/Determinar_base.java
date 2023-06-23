@@ -114,11 +114,11 @@ public class Determinar_base extends AppCompatActivity {
                         Object respuesta = pyov_validar.callAttr("main");
                         String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                             cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                             cadena =  "Resultado: Si es base "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                             textview_resultado.setText(cadena);
                             resultado_tamano.setText(  " Si es base  ");
                         }else{
-                             cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                             cadena = "Resultado: No es base "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                             resultado_tamano.setText( " No es base");
                             textview_resultado.setText(cadena);
                         }
@@ -157,10 +157,10 @@ public class Determinar_base extends AppCompatActivity {
 
                         String cadena ="";
                         if ( ClaseDatosPythonJava.valida_base ==1 ) {
-                             cadena =  "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
+                             cadena =  "Resultado: Si es base "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores si genera a R" + ClaseDatosPythonJava.tamano_vector;
                             resultado_tamano.setText(  " Si es base  ");
                         }else{
-                             cadena = "Resultado: "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
+                             cadena = "Resultado: No es base "+  ClaseDatosPythonJava.v_independiente + "\n El conjunto de vectores no genera a R" + ClaseDatosPythonJava.tamano_vector;
                             resultado_tamano.setText( " No es base");
                         }
                         textview_resultado.setText(cadena);
@@ -435,77 +435,118 @@ public class Determinar_base extends AppCompatActivity {
         if (v_vactores < 1){
             editText_v1_dato1.setText("");
             editText_v1_dato1.setEnabled(false);
+            editText_v1_dato1.setVisibility(View.INVISIBLE);
             editText_v1_dato2.setText("");
             editText_v1_dato2.setEnabled(false);
+            editText_v1_dato2.setVisibility(View.INVISIBLE);
             editText_v1_dato3.setText("");
             editText_v1_dato3.setEnabled(false);
+            editText_v1_dato3.setVisibility(View.INVISIBLE);
             editText_v1_dato4.setText("");
             editText_v1_dato4.setEnabled(false);
+            editText_v1_dato4.setVisibility(View.INVISIBLE);
+
         }
         if (v_vactores < 2){
             editText_v2_dato1.setText("");
             editText_v2_dato1.setEnabled(false);
+            editText_v2_dato1.setVisibility(View.INVISIBLE);
             editText_v2_dato2.setText("");
             editText_v2_dato2.setEnabled(false);
+            editText_v2_dato2.setVisibility(View.INVISIBLE);
             editText_v2_dato3.setText("");
             editText_v2_dato3.setEnabled(false);
+            editText_v2_dato3.setVisibility(View.INVISIBLE);
             editText_v2_dato4.setText("");
             editText_v2_dato4.setEnabled(false);
+            editText_v2_dato4.setVisibility(View.INVISIBLE);
+
         }
         if (v_vactores < 3){
             editText_v3_dato1.setText("");
             editText_v3_dato1.setEnabled(false);
+            editText_v3_dato1.setVisibility(View.INVISIBLE);
             editText_v3_dato2.setText("");
             editText_v3_dato2.setEnabled(false);
+            editText_v3_dato2.setVisibility(View.INVISIBLE);
             editText_v3_dato3.setText("");
             editText_v3_dato3.setEnabled(false);
+            editText_v3_dato3.setVisibility(View.INVISIBLE);
             editText_v3_dato4.setText("");
             editText_v3_dato4.setEnabled(false);
+            editText_v3_dato4.setVisibility(View.INVISIBLE);
         }
         if (v_vactores < 4){
             editText_v4_dato1.setText("");
             editText_v4_dato1.setEnabled(false);
+            editText_v4_dato1.setVisibility(View.INVISIBLE);
             editText_v4_dato2.setText("");
             editText_v4_dato2.setEnabled(false);
+            editText_v4_dato2.setVisibility(View.INVISIBLE);
             editText_v4_dato3.setText("");
             editText_v4_dato3.setEnabled(false);
+            editText_v4_dato3.setVisibility(View.INVISIBLE);
             editText_v4_dato4.setText("");
             editText_v4_dato4.setEnabled(false);
+            editText_v4_dato4.setVisibility(View.INVISIBLE);
         }
 
         if (v_tamano < 1){
             editText_v1_dato1.setText("");
             editText_v1_dato1.setEnabled(false);
+            editText_v1_dato1.setVisibility(View.INVISIBLE);
             editText_v2_dato1.setText("");
             editText_v2_dato1.setEnabled(false);
+            editText_v2_dato1.setVisibility(View.INVISIBLE);
             editText_v3_dato1.setText("");
             editText_v3_dato1.setEnabled(false);
+            editText_v3_dato1.setVisibility(View.INVISIBLE);
             editText_v4_dato1.setText("");
             editText_v4_dato1.setEnabled(false);
+            editText_v4_dato1.setVisibility(View.INVISIBLE);
+
         }
         if (v_tamano < 2){
             editText_v1_dato2.setText("");
             editText_v1_dato2.setEnabled(false);
+            editText_v1_dato2.setVisibility(View.INVISIBLE);
             editText_v2_dato2.setText("");
             editText_v2_dato2.setEnabled(false);
+            editText_v2_dato2.setVisibility(View.INVISIBLE);
             editText_v3_dato2.setText("");
             editText_v3_dato2.setEnabled(false);
+            editText_v3_dato2.setVisibility(View.INVISIBLE);
             editText_v4_dato2.setText("");
             editText_v4_dato2.setEnabled(false);
+            editText_v4_dato2.setVisibility(View.INVISIBLE);
+
         }
         if (v_tamano < 3){
             editText_v1_dato3.setText("");
             editText_v1_dato3.setEnabled(false);
+            editText_v1_dato3.setVisibility(View.INVISIBLE);
+
             editText_v2_dato3.setText("");
             editText_v2_dato3.setEnabled(false);
+            editText_v2_dato3.setVisibility(View.INVISIBLE);
+
             editText_v3_dato3.setText("");
             editText_v3_dato3.setEnabled(false);
+            editText_v3_dato3.setVisibility(View.INVISIBLE);
+
             editText_v4_dato3.setText("");
             editText_v4_dato3.setEnabled(false);
+            editText_v4_dato3.setVisibility(View.INVISIBLE);
+
         }
         if (v_tamano < 4){
             editText_v1_dato4.setText("");
             editText_v1_dato4.setEnabled(false);
+            editText_v1_dato4.setVisibility(View.INVISIBLE);
+            editText_v2_dato4.setVisibility(View.INVISIBLE);
+            editText_v3_dato4.setVisibility(View.INVISIBLE);
+            editText_v4_dato4.setVisibility(View.INVISIBLE);
+
             editText_v2_dato4.setText("");
             editText_v2_dato4.setEnabled(false);
             editText_v3_dato4.setText("");
@@ -517,43 +558,77 @@ public class Determinar_base extends AppCompatActivity {
         //habilitar si es mayor
         if (v_tamano > 0){
             if (v_vactores >= 1){ //editText_v1_dato4.setText("");
-                editText_v1_dato1.setEnabled(true);}
+                editText_v1_dato1.setEnabled(true);
+                editText_v1_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-                editText_v2_dato1.setEnabled(true);}
+                editText_v2_dato1.setEnabled(true);
+                editText_v2_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-                editText_v3_dato1.setEnabled(true);}
+                editText_v3_dato1.setEnabled(true);
+                editText_v3_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-                editText_v4_dato1.setEnabled(true);}
+                editText_v4_dato1.setEnabled(true);
+                editText_v4_dato1.setVisibility(View.VISIBLE);
+
+            }
         }
         if (v_tamano > 1){
             if (v_vactores >= 1){ //editText_v1_dato4.setText("");
-                editText_v1_dato2.setEnabled(true);}
+                editText_v1_dato2.setEnabled(true);
+                editText_v1_dato2.setVisibility(View.VISIBLE);
+
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-                editText_v2_dato2.setEnabled(true);}
+                editText_v2_dato2.setEnabled(true);
+                editText_v2_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-                editText_v3_dato2.setEnabled(true);}
+                editText_v3_dato2.setEnabled(true);
+                editText_v3_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-                editText_v4_dato2.setEnabled(true);}
+                editText_v4_dato2.setEnabled(true);
+                editText_v4_dato2.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 2){
             if (v_vactores >= 1){
-                editText_v1_dato3.setEnabled(true);}
+                editText_v1_dato3.setEnabled(true);
+                editText_v1_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-                editText_v2_dato3.setEnabled(true);}
+                editText_v2_dato3.setEnabled(true);
+                editText_v2_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-                editText_v3_dato3.setEnabled(true);}
+                editText_v3_dato3.setEnabled(true);
+                editText_v3_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-                editText_v4_dato3.setEnabled(true);}
+                editText_v4_dato3.setEnabled(true);
+                editText_v4_dato3.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 3){
             if (v_vactores >= 1){ //editText_v1_dato4.setText("");
-                editText_v1_dato4.setEnabled(true);}
+                editText_v1_dato4.setEnabled(true);
+                editText_v1_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-                editText_v2_dato4.setEnabled(true);}
+                editText_v2_dato4.setEnabled(true);
+                editText_v2_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-                editText_v3_dato4.setEnabled(true);}
+                editText_v3_dato4.setEnabled(true);
+                editText_v3_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-                editText_v4_dato4.setEnabled(true);}
+                editText_v4_dato4.setEnabled(true);
+                editText_v4_dato4.setVisibility(View.VISIBLE);
+            }
         }
 
     }
@@ -568,6 +643,7 @@ public class Determinar_base extends AppCompatActivity {
         editText_v1_dato3.setEnabled(false);
         editText_v1_dato4.setText("");
         editText_v1_dato4.setEnabled(false);
+
 
         editText_v2_dato1.setText("");
         editText_v2_dato1.setEnabled(false);
@@ -596,6 +672,27 @@ public class Determinar_base extends AppCompatActivity {
         editText_v4_dato3.setEnabled(false);
         editText_v4_dato4.setText("");
         editText_v4_dato4.setEnabled(false);
+
+
+        editText_v1_dato1.setVisibility(View.INVISIBLE);
+        editText_v2_dato1.setVisibility(View.INVISIBLE);
+        editText_v3_dato1.setVisibility(View.INVISIBLE);
+        editText_v4_dato1.setVisibility(View.INVISIBLE);
+
+        editText_v1_dato2.setVisibility(View.INVISIBLE);
+        editText_v2_dato2.setVisibility(View.INVISIBLE);
+        editText_v3_dato2.setVisibility(View.INVISIBLE);
+        editText_v4_dato2.setVisibility(View.INVISIBLE);
+
+        editText_v1_dato3.setVisibility(View.INVISIBLE);
+        editText_v2_dato3.setVisibility(View.INVISIBLE);
+        editText_v3_dato3.setVisibility(View.INVISIBLE);
+        editText_v4_dato3.setVisibility(View.INVISIBLE);
+
+        editText_v1_dato4.setVisibility(View.INVISIBLE);
+        editText_v2_dato4.setVisibility(View.INVISIBLE);
+        editText_v3_dato4.setVisibility(View.INVISIBLE);
+        editText_v4_dato4.setVisibility(View.INVISIBLE);
 
     }
 
