@@ -124,10 +124,11 @@
 
 
         <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="5dp">
+            android:id="@+id/v_row_v1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
 
         <TextView
             android:id="@+id/textView12"
@@ -209,6 +210,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/v_row_v2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -307,6 +309,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/v_row_v3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -389,11 +392,11 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/v_row_v4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:padding="5dp">
-
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
@@ -534,6 +537,7 @@
                 android:layout_height="wrap_content"
                 app:layout_constraintTop_toBottomOf="@id/textView9" >
             </com.agog.mathdisplay.MTMathView>
+
             <TextView
                 android:id="@+id/textView90"
                 android:layout_width="wrap_content"

@@ -167,6 +167,7 @@
                 tools:ignore="TextContrastCheck,TextContrastCheck" />
 
             <LinearLayout
+                android:id="@+id/v_row_v1"
                 android:paddingLeft="20px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -225,6 +226,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/v_row_v2"
                 android:paddingLeft="20px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -281,6 +283,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/v_row_v3"
                 android:paddingLeft="20px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -338,6 +341,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/v_row_v4"
                 android:paddingLeft="20px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -412,6 +416,7 @@
 
 
             <LinearLayout
+                android:id="@+id/v_row2_v1"
                 android:paddingLeft="20px"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -470,6 +475,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/v_row2_v2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -525,6 +531,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/v_row2_v3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -580,6 +587,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/v_row2_v4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center"
@@ -703,8 +711,9 @@
                     android:id="@+id/mathviewFormula1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                   app:layout_constraintTop_toBottomOf="@id/textView9" >
+                    app:layout_constraintTop_toBottomOf="@id/textView9" >
                 </com.agog.mathdisplay.MTMathView>
+
                 <TextView
                     android:id="@+id/textView90"
                     android:layout_width="wrap_content"

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.Switch;
 import android.widget.TextView;
@@ -74,6 +75,8 @@ public class CambioBase extends AppCompatActivity {
     Button button_limpia;
     Button button_mas,button_menos;
 
+    LinearLayout linea_vector_1, linea_vector_2, linea_vector_3, linea_vector_4 ;
+    LinearLayout linea2_vector_1, linea2_vector_2, linea2_vector_3, linea2_vector_4 ;
 
     Button establecer_lon_canonico;
     Button button_procedimiento2;
@@ -131,6 +134,16 @@ public class CambioBase extends AppCompatActivity {
             rad_base1 = findViewById(R.id.radbtn_b1);
             rad_base2 = findViewById(R.id.radbtn_b2);
             rad_canonica = findViewById(R.id.radbtn_canonica);
+
+            linea_vector_1 = findViewById(R.id.v_row_v1);
+            linea_vector_2 = findViewById(R.id.v_row_v2);
+            linea_vector_3 = findViewById(R.id.v_row_v3);
+            linea_vector_4 = findViewById(R.id.v_row_v4);
+
+            linea2_vector_1 = findViewById(R.id.v_row2_v1);
+            linea2_vector_2 = findViewById(R.id.v_row2_v2);
+            linea2_vector_3 = findViewById(R.id.v_row2_v3);
+            linea2_vector_4 = findViewById(R.id.v_row2_v4);
 
             button_resultado2 = findViewById(R.id.button_resultado2);
             button_procedimiento2 = findViewById(R.id.button_procedimiento2);
@@ -573,6 +586,10 @@ public class CambioBase extends AppCompatActivity {
             editText_b1_dato3.setEnabled(false);
             editText_b1_dato4.setText("");
             editText_b1_dato4.setEnabled(false);
+            editText_b1_dato1.setVisibility(View.INVISIBLE);
+            editText_b1_dato2.setVisibility(View.INVISIBLE);
+            editText_b1_dato3.setVisibility(View.INVISIBLE);
+            editText_b1_dato4.setVisibility(View.INVISIBLE);
         }
         if (v_vactores < 2){
             editText_b2_dato1.setText("");
@@ -583,6 +600,10 @@ public class CambioBase extends AppCompatActivity {
             editText_b2_dato3.setEnabled(false);
             editText_b2_dato4.setText("");
             editText_b2_dato4.setEnabled(false);
+            editText_b2_dato1.setVisibility(View.INVISIBLE);
+            editText_b2_dato2.setVisibility(View.INVISIBLE);
+            editText_b2_dato3.setVisibility(View.INVISIBLE);
+            editText_b2_dato4.setVisibility(View.INVISIBLE);
         }
         if (v_vactores < 3){
             editText_b3_dato1.setText("");
@@ -593,6 +614,10 @@ public class CambioBase extends AppCompatActivity {
             editText_b3_dato3.setEnabled(false);
             editText_b3_dato4.setText("");
             editText_b3_dato4.setEnabled(false);
+            editText_b3_dato1.setVisibility(View.INVISIBLE);
+            editText_b3_dato2.setVisibility(View.INVISIBLE);
+            editText_b3_dato3.setVisibility(View.INVISIBLE);
+            editText_b3_dato4.setVisibility(View.INVISIBLE);
         }
         if (v_vactores < 4){
             editText_b4_dato1.setText("");
@@ -603,6 +628,10 @@ public class CambioBase extends AppCompatActivity {
             editText_b4_dato3.setEnabled(false);
             editText_b4_dato4.setText("");
             editText_b4_dato4.setEnabled(false);
+            editText_b4_dato1.setVisibility(View.INVISIBLE);
+            editText_b4_dato2.setVisibility(View.INVISIBLE);
+            editText_b4_dato3.setVisibility(View.INVISIBLE);
+            editText_b4_dato4.setVisibility(View.INVISIBLE);
         }
 
         if (v_tamano < 1){
@@ -614,6 +643,10 @@ public class CambioBase extends AppCompatActivity {
             editText_b3_dato1.setEnabled(false);
             editText_b4_dato1.setText("");
             editText_b4_dato1.setEnabled(false);
+            editText_b1_dato1.setVisibility(View.INVISIBLE);
+            editText_b2_dato1.setVisibility(View.INVISIBLE);
+            editText_b3_dato1.setVisibility(View.INVISIBLE);
+            editText_b4_dato1.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 2){
             editText_b1_dato2.setText("");
@@ -624,6 +657,10 @@ public class CambioBase extends AppCompatActivity {
             editText_b3_dato2.setEnabled(false);
             editText_b4_dato2.setText("");
             editText_b4_dato2.setEnabled(false);
+            editText_b1_dato2.setVisibility(View.INVISIBLE);
+            editText_b2_dato2.setVisibility(View.INVISIBLE);
+            editText_b3_dato2.setVisibility(View.INVISIBLE);
+            editText_b4_dato2.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 3){
             editText_b1_dato3.setText("");
@@ -634,6 +671,10 @@ public class CambioBase extends AppCompatActivity {
             editText_b3_dato3.setEnabled(false);
             editText_b4_dato3.setText("");
             editText_b4_dato3.setEnabled(false);
+            editText_b1_dato3.setVisibility(View.INVISIBLE);
+            editText_b2_dato3.setVisibility(View.INVISIBLE);
+            editText_b3_dato3.setVisibility(View.INVISIBLE);
+            editText_b4_dato3.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 4){
             editText_b1_dato4.setText("");
@@ -644,48 +685,108 @@ public class CambioBase extends AppCompatActivity {
             editText_b3_dato4.setEnabled(false);
             editText_b4_dato4.setText("");
             editText_b4_dato4.setEnabled(false);
+            editText_b1_dato4.setVisibility(View.INVISIBLE);
+            editText_b2_dato4.setVisibility(View.INVISIBLE);
+            editText_b3_dato4.setVisibility(View.INVISIBLE);
+            editText_b4_dato4.setVisibility(View.INVISIBLE);
+        }
+        if (v_vactores < 1){
+            linea_vector_1.setVisibility(View.GONE);
+        }
+        if (v_vactores < 2){
+            linea_vector_2.setVisibility(View.GONE);
+        }
+        if (v_vactores < 3){
+            linea_vector_3.setVisibility(View.GONE);
+        }
+        if (v_vactores < 4){
+            linea_vector_4.setVisibility(View.GONE);
+        }
+        if (v_vactores >= 1){
+            linea_vector_1.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 2){
+            linea_vector_2.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 3){
+            linea_vector_3.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 4){
+            linea_vector_4.setVisibility(View.VISIBLE);
         }
 
         //habilitar si es mayor
         if (v_tamano > 0){
             if (v_vactores >= 1){ //editText_b1_dato4.setText("");
-                editText_b1_dato1.setEnabled(true);}
+                editText_b1_dato1.setEnabled(true);
+                editText_b1_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-                editText_b2_dato1.setEnabled(true);}
+                editText_b2_dato1.setEnabled(true);
+                editText_b2_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-                editText_b3_dato1.setEnabled(true);}
+                editText_b3_dato1.setEnabled(true);
+                editText_b3_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-                editText_b4_dato1.setEnabled(true);}
+                editText_b4_dato1.setEnabled(true);
+                editText_b4_dato1.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 1){
             if (v_vactores >= 1){ //editText_b1_dato4.setText("");
-                editText_b1_dato2.setEnabled(true);}
+                editText_b1_dato2.setEnabled(true);
+                editText_b1_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-                editText_b2_dato2.setEnabled(true);}
+                editText_b2_dato2.setEnabled(true);
+                editText_b2_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-                editText_b3_dato2.setEnabled(true);}
+                editText_b3_dato2.setEnabled(true);
+                editText_b3_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-                editText_b4_dato2.setEnabled(true);}
+                editText_b4_dato2.setEnabled(true);
+                editText_b4_dato2.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 2){
             if (v_vactores >= 1){
-                editText_b1_dato3.setEnabled(true);}
+                editText_b1_dato3.setEnabled(true);
+                editText_b1_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-                editText_b2_dato3.setEnabled(true);}
+                editText_b2_dato3.setEnabled(true);
+                editText_b2_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-                editText_b3_dato3.setEnabled(true);}
+                editText_b3_dato3.setEnabled(true);
+                editText_b3_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-                editText_b4_dato3.setEnabled(true);}
+                editText_b4_dato3.setEnabled(true);
+                editText_b4_dato3.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 3){
             if (v_vactores >= 1){ //editText_b1_dato4.setText("");
-                editText_b1_dato4.setEnabled(true);}
+                editText_b1_dato4.setEnabled(true);
+                editText_b1_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-                editText_b2_dato4.setEnabled(true);}
+                editText_b2_dato4.setEnabled(true);
+                editText_b2_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-                editText_b3_dato4.setEnabled(true);}
+                editText_b3_dato4.setEnabled(true);
+                editText_b3_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-                editText_b4_dato4.setEnabled(true);}
+                editText_b4_dato4.setEnabled(true);
+                editText_b4_dato4.setVisibility(View.VISIBLE);
+            }
         }
 
     }
@@ -705,6 +806,12 @@ public class CambioBase extends AppCompatActivity {
            editText2_b1_dato3.setEnabled(false);
            editText2_b1_dato4.setText("");
            editText2_b1_dato4.setEnabled(false);
+            editText2_b1_dato1.setVisibility(View.INVISIBLE);
+            editText2_b1_dato2.setVisibility(View.INVISIBLE);
+            editText2_b1_dato3.setVisibility(View.INVISIBLE);
+            editText2_b1_dato4.setVisibility(View.INVISIBLE);
+
+
         }
         if (v_vactores < 2){
            editText2_b2_dato1.setText("");
@@ -715,6 +822,10 @@ public class CambioBase extends AppCompatActivity {
            editText2_b2_dato3.setEnabled(false);
            editText2_b2_dato4.setText("");
            editText2_b2_dato4.setEnabled(false);
+            editText2_b2_dato1.setVisibility(View.INVISIBLE);
+            editText2_b2_dato2.setVisibility(View.INVISIBLE);
+            editText2_b2_dato3.setVisibility(View.INVISIBLE);
+            editText2_b2_dato4.setVisibility(View.INVISIBLE);
         }
         if (v_vactores < 3){
            editText2_b3_dato1.setText("");
@@ -725,6 +836,10 @@ public class CambioBase extends AppCompatActivity {
            editText2_b3_dato3.setEnabled(false);
            editText2_b3_dato4.setText("");
            editText2_b3_dato4.setEnabled(false);
+            editText2_b3_dato1.setVisibility(View.INVISIBLE);
+            editText2_b3_dato2.setVisibility(View.INVISIBLE);
+            editText2_b3_dato3.setVisibility(View.INVISIBLE);
+            editText2_b3_dato4.setVisibility(View.INVISIBLE);
         }
         if (v_vactores < 4){
            editText2_b4_dato1.setText("");
@@ -735,6 +850,10 @@ public class CambioBase extends AppCompatActivity {
            editText2_b4_dato3.setEnabled(false);
            editText2_b4_dato4.setText("");
            editText2_b4_dato4.setEnabled(false);
+            editText2_b4_dato1.setVisibility(View.INVISIBLE);
+            editText2_b4_dato2.setVisibility(View.INVISIBLE);
+            editText2_b4_dato3.setVisibility(View.INVISIBLE);
+            editText2_b4_dato4.setVisibility(View.INVISIBLE);
         }
 
         if (v_tamano < 1){
@@ -746,6 +865,10 @@ public class CambioBase extends AppCompatActivity {
            editText2_b3_dato1.setEnabled(false);
            editText2_b4_dato1.setText("");
            editText2_b4_dato1.setEnabled(false);
+            editText2_b1_dato1.setVisibility(View.INVISIBLE);
+            editText2_b2_dato1.setVisibility(View.INVISIBLE);
+            editText2_b3_dato1.setVisibility(View.INVISIBLE);
+            editText2_b4_dato1.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 2){
            editText2_b1_dato2.setText("");
@@ -756,6 +879,10 @@ public class CambioBase extends AppCompatActivity {
            editText2_b3_dato2.setEnabled(false);
            editText2_b4_dato2.setText("");
            editText2_b4_dato2.setEnabled(false);
+            editText2_b1_dato2.setVisibility(View.INVISIBLE);
+            editText2_b2_dato2.setVisibility(View.INVISIBLE);
+            editText2_b3_dato2.setVisibility(View.INVISIBLE);
+            editText2_b4_dato2.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 3){
            editText2_b1_dato3.setText("");
@@ -766,6 +893,10 @@ public class CambioBase extends AppCompatActivity {
            editText2_b3_dato3.setEnabled(false);
            editText2_b4_dato3.setText("");
            editText2_b4_dato3.setEnabled(false);
+            editText2_b1_dato3.setVisibility(View.INVISIBLE);
+            editText2_b2_dato3.setVisibility(View.INVISIBLE);
+            editText2_b3_dato3.setVisibility(View.INVISIBLE);
+            editText2_b4_dato3.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 4){
            editText2_b1_dato4.setText("");
@@ -776,48 +907,107 @@ public class CambioBase extends AppCompatActivity {
            editText2_b3_dato4.setEnabled(false);
            editText2_b4_dato4.setText("");
            editText2_b4_dato4.setEnabled(false);
+            editText2_b1_dato4.setVisibility(View.INVISIBLE);
+            editText2_b2_dato4.setVisibility(View.INVISIBLE);
+            editText2_b3_dato4.setVisibility(View.INVISIBLE);
+            editText2_b4_dato4.setVisibility(View.INVISIBLE);
         }
-
+        if (v_vactores < 1){
+            linea2_vector_1.setVisibility(View.GONE);
+        }
+        if (v_vactores < 2){
+            linea2_vector_2.setVisibility(View.GONE);
+        }
+        if (v_vactores < 3){
+            linea2_vector_3.setVisibility(View.GONE);
+        }
+        if (v_vactores < 4){
+            linea2_vector_4.setVisibility(View.GONE);
+        }
+        if (v_vactores >= 1){
+            linea2_vector_1.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 2){
+            linea2_vector_2.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 3){
+            linea2_vector_3.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 4){
+            linea2_vector_4.setVisibility(View.VISIBLE);
+        }
         //habilitar si es mayor
         if (v_tamano > 0){
             if (v_vactores >= 1){ //editText_b1_dato4.setText("");
-               editText2_b1_dato1.setEnabled(true);}
+                editText2_b1_dato1.setEnabled(true);
+                editText2_b1_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-               editText2_b2_dato1.setEnabled(true);}
+                editText2_b2_dato1.setEnabled(true);
+                editText2_b2_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-               editText2_b3_dato1.setEnabled(true);}
+               editText2_b3_dato1.setEnabled(true);
+               editText2_b3_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-               editText2_b4_dato1.setEnabled(true);}
+               editText2_b4_dato1.setEnabled(true);
+               editText2_b4_dato1.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 1){
             if (v_vactores >= 1){ //editText_b1_dato4.setText("");
-               editText2_b1_dato2.setEnabled(true);}
+                editText2_b1_dato2.setEnabled(true);
+                editText2_b1_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-               editText2_b2_dato2.setEnabled(true);}
+                editText2_b2_dato2.setEnabled(true);
+                editText2_b2_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-               editText2_b3_dato2.setEnabled(true);}
+                editText2_b3_dato2.setEnabled(true);
+                editText2_b3_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-               editText2_b4_dato2.setEnabled(true);}
+                editText2_b4_dato2.setEnabled(true);
+                editText2_b4_dato2.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 2){
             if (v_vactores >= 1){
-               editText2_b1_dato3.setEnabled(true);}
+                editText2_b1_dato3.setEnabled(true);
+                editText2_b1_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-               editText2_b2_dato3.setEnabled(true);}
+                editText2_b2_dato3.setEnabled(true);
+                editText2_b2_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-               editText2_b3_dato3.setEnabled(true);}
+                editText2_b3_dato3.setEnabled(true);
+                editText2_b3_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-               editText2_b4_dato3.setEnabled(true);}
+                editText2_b4_dato3.setEnabled(true);
+                editText2_b4_dato3.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 3){
             if (v_vactores >= 1){ //editText_b1_dato4.setText("");
-               editText2_b1_dato4.setEnabled(true);}
+                editText2_b1_dato4.setEnabled(true);
+                editText2_b1_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_b2_dato4.setText("");
-               editText2_b2_dato4.setEnabled(true);}
+                editText2_b2_dato4.setEnabled(true);
+                editText2_b2_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_b3_dato4.setText("");
-               editText2_b3_dato4.setEnabled(true);}
+                editText2_b3_dato4.setEnabled(true);
+                editText2_b3_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_b4_dato4.setText("");
-               editText2_b4_dato4.setEnabled(true);}
+                editText2_b4_dato4.setEnabled(true);
+                editText2_b4_dato4.setVisibility(View.VISIBLE);
+            }
         }
 
     }
@@ -861,6 +1051,31 @@ public class CambioBase extends AppCompatActivity {
        editText_b4_dato4.setText("");
        editText_b4_dato4.setEnabled(false);
 
+
+        editText_b1_dato1.setVisibility(View.INVISIBLE);
+        editText_b2_dato1.setVisibility(View.INVISIBLE);
+        editText_b3_dato1.setVisibility(View.INVISIBLE);
+        editText_b4_dato1.setVisibility(View.INVISIBLE);
+
+        editText_b1_dato2.setVisibility(View.INVISIBLE);
+        editText_b2_dato2.setVisibility(View.INVISIBLE);
+        editText_b3_dato2.setVisibility(View.INVISIBLE);
+        editText_b4_dato2.setVisibility(View.INVISIBLE);
+
+        editText_b1_dato3.setVisibility(View.INVISIBLE);
+        editText_b2_dato3.setVisibility(View.INVISIBLE);
+        editText_b3_dato3.setVisibility(View.INVISIBLE);
+        editText_b4_dato3.setVisibility(View.INVISIBLE);
+
+        editText_b1_dato4.setVisibility(View.INVISIBLE);
+        editText_b2_dato4.setVisibility(View.INVISIBLE);
+        editText_b3_dato4.setVisibility(View.INVISIBLE);
+        editText_b4_dato4.setVisibility(View.INVISIBLE);
+
+        linea_vector_1.setVisibility(View.GONE);
+        linea_vector_2.setVisibility(View.GONE);
+        linea_vector_3.setVisibility(View.GONE);
+        linea_vector_4.setVisibility(View.GONE);
 /////////////////////////////////////////////////////
         // resultado_base.setText("");
        // textview_resultado.setText("");
@@ -905,6 +1120,34 @@ public class CambioBase extends AppCompatActivity {
         editText2_b4_dato3.setEnabled(false);
         editText2_b4_dato4.setText("");
         editText2_b4_dato4.setEnabled(false);
+
+
+        editText2_b1_dato1.setVisibility(View.INVISIBLE);
+        editText2_b2_dato1.setVisibility(View.INVISIBLE);
+        editText2_b3_dato1.setVisibility(View.INVISIBLE);
+        editText2_b4_dato1.setVisibility(View.INVISIBLE);
+
+        editText2_b1_dato2.setVisibility(View.INVISIBLE);
+        editText2_b2_dato2.setVisibility(View.INVISIBLE);
+        editText2_b3_dato2.setVisibility(View.INVISIBLE);
+        editText2_b4_dato2.setVisibility(View.INVISIBLE);
+
+        editText2_b1_dato3.setVisibility(View.INVISIBLE);
+        editText2_b2_dato3.setVisibility(View.INVISIBLE);
+        editText2_b3_dato3.setVisibility(View.INVISIBLE);
+        editText2_b4_dato3.setVisibility(View.INVISIBLE);
+
+        editText2_b1_dato4.setVisibility(View.INVISIBLE);
+        editText2_b2_dato4.setVisibility(View.INVISIBLE);
+        editText2_b3_dato4.setVisibility(View.INVISIBLE);
+        editText2_b4_dato4.setVisibility(View.INVISIBLE);
+
+        linea2_vector_1.setVisibility(View.GONE);
+        linea2_vector_2.setVisibility(View.GONE);
+        linea2_vector_3.setVisibility(View.GONE);
+        linea2_vector_4.setVisibility(View.GONE);
+
+
     }
 
 

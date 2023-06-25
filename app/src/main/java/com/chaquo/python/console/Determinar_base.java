@@ -7,6 +7,7 @@ import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +52,8 @@ public class Determinar_base extends AppCompatActivity {
 
     MTMathView mathView_formula1;
 
+    LinearLayout linea_vector_1, linea_vector_2, linea_vector_3, linea_vector_4 ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -87,6 +90,12 @@ public class Determinar_base extends AppCompatActivity {
 
         textview_resultado = findViewById(R.id.textView9);
         button_procedimiento = findViewById(R.id.button_procedimientoOrtonormal);
+
+
+        linea_vector_1 = findViewById(R.id.v_row_v1);
+        linea_vector_2 = findViewById(R.id.v_row_v2);
+        linea_vector_3 = findViewById(R.id.v_row_v3);
+        linea_vector_4 = findViewById(R.id.v_row_v4);
 
       /*  mathView_formula1 = findViewById(R.id.mathviewFormula1);
         mathView_formula1.setFontSize(40);
@@ -445,6 +454,7 @@ public class Determinar_base extends AppCompatActivity {
             editText_v1_dato4.setText("");
             editText_v1_dato4.setEnabled(false);
             editText_v1_dato4.setVisibility(View.INVISIBLE);
+            linea_vector_1.setVisibility(View.GONE);
 
         }
         if (v_vactores < 2){
@@ -460,6 +470,7 @@ public class Determinar_base extends AppCompatActivity {
             editText_v2_dato4.setText("");
             editText_v2_dato4.setEnabled(false);
             editText_v2_dato4.setVisibility(View.INVISIBLE);
+            linea_vector_2.setVisibility(View.GONE);
 
         }
         if (v_vactores < 3){
@@ -475,6 +486,9 @@ public class Determinar_base extends AppCompatActivity {
             editText_v3_dato4.setText("");
             editText_v3_dato4.setEnabled(false);
             editText_v3_dato4.setVisibility(View.INVISIBLE);
+            linea_vector_3.setVisibility(View.GONE);
+
+
         }
         if (v_vactores < 4){
             editText_v4_dato1.setText("");
@@ -489,6 +503,8 @@ public class Determinar_base extends AppCompatActivity {
             editText_v4_dato4.setText("");
             editText_v4_dato4.setEnabled(false);
             editText_v4_dato4.setVisibility(View.INVISIBLE);
+            linea_vector_4.setVisibility(View.GONE);
+
         }
 
         if (v_tamano < 1){
@@ -554,9 +570,34 @@ public class Determinar_base extends AppCompatActivity {
             editText_v4_dato4.setText("");
             editText_v4_dato4.setEnabled(false);
         }
-
+        if (v_vactores < 1){
+            linea_vector_1.setVisibility(View.GONE);
+        }
+        if (v_vactores < 2){
+            linea_vector_2.setVisibility(View.GONE);
+        }
+        if (v_vactores < 3){
+            linea_vector_3.setVisibility(View.GONE);
+        }
+        if (v_vactores < 4){
+            linea_vector_4.setVisibility(View.GONE);
+        }
+        if (v_vactores >= 1){
+            linea_vector_1.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 2){
+            linea_vector_2.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 3){
+            linea_vector_3.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 4){
+            linea_vector_4.setVisibility(View.VISIBLE);
+        }
         //habilitar si es mayor
         if (v_tamano > 0){
+
+
             if (v_vactores >= 1){ //editText_v1_dato4.setText("");
                 editText_v1_dato1.setEnabled(true);
                 editText_v1_dato1.setVisibility(View.VISIBLE);
@@ -693,6 +734,11 @@ public class Determinar_base extends AppCompatActivity {
         editText_v2_dato4.setVisibility(View.INVISIBLE);
         editText_v3_dato4.setVisibility(View.INVISIBLE);
         editText_v4_dato4.setVisibility(View.INVISIBLE);
+
+            linea_vector_1.setVisibility(View.GONE);
+            linea_vector_2.setVisibility(View.GONE);
+            linea_vector_3.setVisibility(View.GONE);
+            linea_vector_4.setVisibility(View.GONE);
 
     }
 

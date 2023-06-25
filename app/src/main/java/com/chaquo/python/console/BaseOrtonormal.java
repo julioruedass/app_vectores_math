@@ -15,6 +15,7 @@ import android.view.View;
 import android.view.inputmethod.BaseInputConnection;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -60,6 +61,8 @@ public class BaseOrtonormal extends AppCompatActivity {
     Button diagonal_izq, getDiagonal_dere;
     MTMathView mathView_formula1;
 
+    LinearLayout linea_vector_1, linea_vector_2, linea_vector_3, linea_vector_4 ;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -100,6 +103,11 @@ public class BaseOrtonormal extends AppCompatActivity {
         button_procedimiento = findViewById(R.id.button_procedimientoOrtonormal);
         diagonal_izq    =  findViewById(R.id.butom_guion_izq);
         getDiagonal_dere = findViewById(R.id.butom_guion_dere);
+
+        linea_vector_1 = findViewById(R.id.v_row_v1);
+        linea_vector_2 = findViewById(R.id.v_row_v2);
+        linea_vector_3 = findViewById(R.id.v_row_v3);
+        linea_vector_4 = findViewById(R.id.v_row_v4);
 
         mathView_formula1 = findViewById(R.id.mathviewFormula1);
         mathView_formula1.setFontSize(40);
@@ -538,12 +546,17 @@ public class BaseOrtonormal extends AppCompatActivity {
             if (v_vactores < 1){
                 editText_v1_dato1.setText("");
                 editText_v1_dato1.setEnabled(false);
+                editText_v1_dato1.setVisibility(View.INVISIBLE);
                 editText_v1_dato2.setText("");
                 editText_v1_dato2.setEnabled(false);
+                editText_v1_dato2.setVisibility(View.INVISIBLE);
                 editText_v1_dato3.setText("");
                 editText_v1_dato3.setEnabled(false);
+                editText_v1_dato3.setVisibility(View.INVISIBLE);
                 editText_v1_dato4.setText("");
                 editText_v1_dato4.setEnabled(false);
+                editText_v1_dato4.setVisibility(View.INVISIBLE);
+
             }
             if (v_vactores < 2){
                 editText_v2_dato1.setText("");
@@ -554,6 +567,10 @@ public class BaseOrtonormal extends AppCompatActivity {
                 editText_v2_dato3.setEnabled(false);
                 editText_v2_dato4.setText("");
                 editText_v2_dato4.setEnabled(false);
+                editText_v2_dato1.setVisibility(View.INVISIBLE);
+                editText_v2_dato2.setVisibility(View.INVISIBLE);
+                editText_v2_dato3.setVisibility(View.INVISIBLE);
+                editText_v2_dato4.setVisibility(View.INVISIBLE);
             }
             if (v_vactores < 3){
                 editText_v3_dato1.setText("");
@@ -564,6 +581,10 @@ public class BaseOrtonormal extends AppCompatActivity {
                 editText_v3_dato3.setEnabled(false);
                 editText_v3_dato4.setText("");
                 editText_v3_dato4.setEnabled(false);
+                editText_v3_dato1.setVisibility(View.INVISIBLE);
+                editText_v3_dato2.setVisibility(View.INVISIBLE);
+                editText_v3_dato3.setVisibility(View.INVISIBLE);
+                editText_v3_dato4.setVisibility(View.INVISIBLE);
             }
             if (v_vactores < 4){
                 editText_v4_dato1.setText("");
@@ -574,6 +595,10 @@ public class BaseOrtonormal extends AppCompatActivity {
                 editText_v4_dato3.setEnabled(false);
                 editText_v4_dato4.setText("");
                 editText_v4_dato4.setEnabled(false);
+                editText_v4_dato1.setVisibility(View.INVISIBLE);
+                editText_v4_dato2.setVisibility(View.INVISIBLE);
+                editText_v4_dato3.setVisibility(View.INVISIBLE);
+                editText_v4_dato4.setVisibility(View.INVISIBLE);
             }
 
         if (v_tamano < 1){
@@ -585,6 +610,10 @@ public class BaseOrtonormal extends AppCompatActivity {
             editText_v3_dato1.setEnabled(false);
             editText_v4_dato1.setText("");
             editText_v4_dato1.setEnabled(false);
+            editText_v1_dato1.setVisibility(View.INVISIBLE);
+            editText_v2_dato1.setVisibility(View.INVISIBLE);
+            editText_v3_dato1.setVisibility(View.INVISIBLE);
+            editText_v4_dato1.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 2){
             editText_v1_dato2.setText("");
@@ -595,6 +624,10 @@ public class BaseOrtonormal extends AppCompatActivity {
             editText_v3_dato2.setEnabled(false);
             editText_v4_dato2.setText("");
             editText_v4_dato2.setEnabled(false);
+            editText_v1_dato2.setVisibility(View.INVISIBLE);
+            editText_v2_dato2.setVisibility(View.INVISIBLE);
+            editText_v3_dato2.setVisibility(View.INVISIBLE);
+            editText_v4_dato2.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 3){
             editText_v1_dato3.setText("");
@@ -605,6 +638,10 @@ public class BaseOrtonormal extends AppCompatActivity {
             editText_v3_dato3.setEnabled(false);
             editText_v4_dato3.setText("");
             editText_v4_dato3.setEnabled(false);
+            editText_v1_dato3.setVisibility(View.INVISIBLE);
+            editText_v2_dato3.setVisibility(View.INVISIBLE);
+            editText_v3_dato3.setVisibility(View.INVISIBLE);
+            editText_v4_dato3.setVisibility(View.INVISIBLE);
         }
         if (v_tamano < 4){
             editText_v1_dato4.setText("");
@@ -615,48 +652,107 @@ public class BaseOrtonormal extends AppCompatActivity {
             editText_v3_dato4.setEnabled(false);
             editText_v4_dato4.setText("");
             editText_v4_dato4.setEnabled(false);
+            editText_v1_dato4.setVisibility(View.INVISIBLE);
+            editText_v2_dato4.setVisibility(View.INVISIBLE);
+            editText_v3_dato4.setVisibility(View.INVISIBLE);
+            editText_v4_dato4.setVisibility(View.INVISIBLE);
         }
-
+        if (v_vactores < 1){
+            linea_vector_1.setVisibility(View.GONE);
+        }
+        if (v_vactores < 2){
+            linea_vector_2.setVisibility(View.GONE);
+        }
+        if (v_vactores < 3){
+            linea_vector_3.setVisibility(View.GONE);
+        }
+        if (v_vactores < 4){
+            linea_vector_4.setVisibility(View.GONE);
+        }
+        if (v_vactores >= 1){
+            linea_vector_1.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 2){
+            linea_vector_2.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 3){
+            linea_vector_3.setVisibility(View.VISIBLE);
+        }
+        if (v_vactores >= 4){
+            linea_vector_4.setVisibility(View.VISIBLE);
+        }
         //habilitar si es mayor
         if (v_tamano > 0){
             if (v_vactores >= 1){ //editText_v1_dato4.setText("");
-            editText_v1_dato1.setEnabled(true);}
+                editText_v1_dato1.setEnabled(true);
+                editText_v1_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-            editText_v2_dato1.setEnabled(true);}
+                editText_v2_dato1.setEnabled(true);
+                editText_v2_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-            editText_v3_dato1.setEnabled(true);}
+                editText_v3_dato1.setEnabled(true);
+                editText_v3_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-            editText_v4_dato1.setEnabled(true);}
+                editText_v4_dato1.setEnabled(true);
+                editText_v4_dato1.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 1){
             if (v_vactores >= 1){ //editText_v1_dato4.setText("");
-                editText_v1_dato2.setEnabled(true);}
+                editText_v1_dato2.setEnabled(true);
+                editText_v1_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-                editText_v2_dato2.setEnabled(true);}
+                editText_v2_dato2.setEnabled(true);
+                editText_v2_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-                editText_v3_dato2.setEnabled(true);}
+                editText_v3_dato2.setEnabled(true);
+                editText_v3_dato2.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-                editText_v4_dato2.setEnabled(true);}
+                editText_v4_dato2.setEnabled(true);
+                editText_v4_dato2.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 2){
             if (v_vactores >= 1){
-                editText_v1_dato3.setEnabled(true);}
+                editText_v1_dato3.setEnabled(true);
+                editText_v1_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-                editText_v2_dato3.setEnabled(true);}
+                editText_v2_dato3.setEnabled(true);
+                editText_v2_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-                editText_v3_dato3.setEnabled(true);}
+                editText_v3_dato3.setEnabled(true);
+                editText_v3_dato3.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-                editText_v4_dato3.setEnabled(true);}
+                editText_v4_dato3.setEnabled(true);
+                editText_v4_dato3.setVisibility(View.VISIBLE);
+            }
         }
         if (v_tamano > 3){
             if (v_vactores >= 1){ //editText_v1_dato4.setText("");
-                editText_v1_dato4.setEnabled(true);}
+                editText_v1_dato4.setEnabled(true);
+                editText_v1_dato1.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 2){//editText_v2_dato4.setText("");
-                editText_v2_dato4.setEnabled(true);}
+                editText_v2_dato4.setEnabled(true);
+                editText_v2_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 3){ //editText_v3_dato4.setText("");
-                editText_v3_dato4.setEnabled(true);}
+                editText_v3_dato4.setEnabled(true);
+                editText_v3_dato4.setVisibility(View.VISIBLE);
+            }
             if (v_vactores >= 4){//editText_v4_dato4.setText("");
-                editText_v4_dato4.setEnabled(true);}
+                editText_v4_dato4.setEnabled(true);
+                editText_v4_dato4.setVisibility(View.VISIBLE);
+            }
         }
 
     }
@@ -700,10 +796,28 @@ public class BaseOrtonormal extends AppCompatActivity {
             editText_v4_dato4.setText("");
             editText_v4_dato4.setEnabled(false);
 
-        resultado_base.setText("");
-        textview_resultado.setText("");
-
-
+            editText_v1_dato1.setVisibility(View.INVISIBLE);
+            editText_v1_dato2.setVisibility(View.INVISIBLE);
+            editText_v1_dato3.setVisibility(View.INVISIBLE);
+            editText_v1_dato4.setVisibility(View.INVISIBLE);
+            editText_v2_dato1.setVisibility(View.INVISIBLE);
+            editText_v2_dato2.setVisibility(View.INVISIBLE);
+            editText_v2_dato3.setVisibility(View.INVISIBLE);
+            editText_v2_dato4.setVisibility(View.INVISIBLE);
+            editText_v3_dato1.setVisibility(View.INVISIBLE);
+            editText_v3_dato2.setVisibility(View.INVISIBLE);
+            editText_v3_dato3.setVisibility(View.INVISIBLE);
+            editText_v3_dato4.setVisibility(View.INVISIBLE);
+            editText_v4_dato1.setVisibility(View.INVISIBLE);
+            editText_v4_dato2.setVisibility(View.INVISIBLE);
+            editText_v4_dato3.setVisibility(View.INVISIBLE);
+            editText_v4_dato4.setVisibility(View.INVISIBLE);
+        linea_vector_1.setVisibility(View.GONE);
+        linea_vector_2.setVisibility(View.GONE);
+        linea_vector_3.setVisibility(View.GONE);
+        linea_vector_4.setVisibility(View.GONE);
+            resultado_base.setText("");
+            textview_resultado.setText("");
     }
 
     @Override
