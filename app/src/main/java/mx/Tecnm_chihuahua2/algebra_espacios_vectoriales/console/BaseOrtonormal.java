@@ -1,18 +1,15 @@
-package com.chaquo.python.console;
+package mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console;
 
 //import android.support.v7.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.KeyEventDispatcher;
 
 //import android.content.DialogInterface;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.inputmethod.BaseInputConnection;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -23,6 +20,7 @@ import com.agog.mathdisplay.MTMathView;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
+import com.chaquo.python.console.R;
 
 import java.io.IOException;
 import java.util.regex.Matcher;

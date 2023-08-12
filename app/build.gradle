@@ -6,7 +6,7 @@ plugins {
 android {
     compileSdkVersion 31
     defaultConfig {
-        applicationId "com.chaquo.python.console"
+        applicationId "mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console"
         minSdkVersion 19
         targetSdkVersion 31
         versionCode 1

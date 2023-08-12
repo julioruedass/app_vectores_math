@@ -1,4 +1,4 @@
-package com.chaquo.python.console;
+package mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console;
 
 public class ClaseDatosPythonJava {
     public static float lado1;

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".CambioBase">
+    tools:context="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.CambioBase">
 
     <Switch
         android:id="@+id/switch1"

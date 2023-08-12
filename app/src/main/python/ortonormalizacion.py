@@ -1,4 +1,4 @@
-from com.chaquo.python.console import ClaseDatosPythonJava as Datos
+from  mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console import ClaseDatosPythonJava as Datos
 from sympy import sqrt, Matrix, init_printing, pprint
 from sympy import latex
 

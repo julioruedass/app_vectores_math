@@ -1,4 +1,4 @@
-package com.chaquo.python.console;
+package mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,6 +17,7 @@ import com.agog.mathdisplay.MTMathView;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
 import com.chaquo.python.android.AndroidPlatform;
+import com.chaquo.python.console.R;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

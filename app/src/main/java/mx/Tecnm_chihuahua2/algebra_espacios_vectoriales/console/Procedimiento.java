@@ -1,4 +1,4 @@
-package com.chaquo.python.console;
+package mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.agog.mathdisplay.MTMathView;
 import com.chaquo.python.PyObject;
 import com.chaquo.python.Python;
+import com.chaquo.python.console.R;
 
 public class Procedimiento extends AppCompatActivity {
 

@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:scrollbarStyle="outsideOverlay"
-    tools:context=".Procedimiento">
+    tools:context="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.Procedimiento">
     <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">

@@ -1,4 +1,4 @@
-package com.chaquo.python.console;
+package mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console;
 
 //import android.support.v7.app.AppCompatActivity;
 import androidx.appcompat.app.*;
@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.chaquo.python.console.R;
 
 public class ActividadPrincipal extends AppCompatActivity {
 

@@ -12,14 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".CambioBase"
+            android:name="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.CambioBase"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".Procedimiento"
+            android:name="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.Procedimiento"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -27,20 +27,20 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".BaseOrtonormal"
+            android:name="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.BaseOrtonormal"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
         />
         <activity
-            android:name=".Determinar_base"
+            android:name="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.Determinar_base"
             android:exported="false"
             android:theme="@style/AppTheme.NoActionBar"
             />
         <activity
-            android:name=".ActividadPrincipal"
+            android:name="mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.console.ActividadPrincipal"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

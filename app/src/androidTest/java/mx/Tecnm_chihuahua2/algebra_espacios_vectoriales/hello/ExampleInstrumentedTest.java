@@ -1,7 +1,8 @@
-package com.chaquo.python.hello;
+package mx.Tecnm_chihuahua2.algebra_espacios_vectoriales.hello;
 
 import android.content.Context;
-import androidx.test.platform.app.InstrumentationRegistry;
+
+import androidx.test.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 
 import org.junit.Test;
